@@ -12,18 +12,23 @@
   }
   function apply(t){root.setAttribute('data-theme',t);if(btn)btn.textContent=t==='dark'?'☀️':'🌙';}
 
-  // playful "catch me" hero emoji — dodges the cursor
+  // playful "catch me" hero emoji beside the name — dodges the cursor
   var hero=document.querySelector('.hero'), emo=document.getElementById('heroEmoji');
   if(hero && emo){
     var faces=['😄','🙂','😁','😆','🤪','😎','🥳','😜','😊'];
     function hop(){
-      var maxX=Math.max(8, hero.clientWidth - emo.offsetWidth - 8);
-      var maxY=Math.max(8, hero.clientHeight - emo.offsetHeight - 8);
-      emo.style.left=(8+Math.random()*(maxX-8))+'px';
-      emo.style.top=(8+Math.random()*(maxY-8))+'px';
+      // measure the emoji's untransformed (home) position
+      var prev=emo.style.transform; emo.style.transform='none';
+      var nat=emo.getBoundingClientRect(); emo.style.transform=prev;
+      var hr=hero.getBoundingClientRect();
+      var minDX=(hr.left+8)-nat.left, maxDX=(hr.right-8)-nat.right;
+      var minDY=(hr.top+8)-nat.top, maxDY=(hr.bottom-8)-nat.bottom;
+      if(maxDX<minDX){var a=minDX;minDX=maxDX;maxDX=a;}
+      if(maxDY<minDY){var b=minDY;minDY=maxDY;maxDY=b;}
+      var dx=minDX+Math.random()*(maxDX-minDX);
+      var dy=minDY+Math.random()*(maxDY-minDY);
       emo.textContent=faces[Math.floor(Math.random()*faces.length)];
-      emo.style.transform='rotate('+(Math.random()*44-22)+'deg) scale(1.15)';
-      setTimeout(function(){emo.style.transform='rotate(0deg) scale(1)';},300);
+      emo.style.transform='translate('+dx+'px,'+dy+'px) rotate('+(Math.random()*44-22)+'deg)';
     }
     emo.addEventListener('mouseenter', hop);
     emo.addEventListener('click', hop);
