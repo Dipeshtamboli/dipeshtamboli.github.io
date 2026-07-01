@@ -278,7 +278,10 @@ a.media-card:hover{border-color:var(--accent);transform:translateY(-2px);text-de
 :root[data-theme="dark"] .gt-node.gi.phd{--c:#e6b84f}
 
 @media(max-width:640px){
-  .gt{height:220px}
+  .gt-scroll{overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;margin:0 -16px;padding:6px 16px 10px}
+  .gt-scroll::-webkit-scrollbar{height:5px}
+  .gt-scroll::-webkit-scrollbar-thumb{background:var(--border);border-radius:99px}
+  .gt{height:220px;width:860px;min-width:860px;position:static;left:auto;transform:none;margin:0}
   .gt-line{top:160px}
   .gt-band{top:128px;height:64px}
   .gt-band.iitb{border-radius:32px 0 0 32px}
