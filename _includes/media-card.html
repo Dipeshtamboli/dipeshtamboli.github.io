@@ -1,0 +1,14 @@
+{%- assign c = include.card -%}
+        <a class="media-card" href="{{ c.href }}">
+          {%- if c.thumb %}
+          <img class="thumb" src="{{ '/images/media/' | append: c.thumb | relative_url }}" alt="" loading="lazy">
+          {%- else %}
+          <div class="thumb-ph"><img src="{{ '/images/favicons/' | append: c.fav | relative_url }}" alt="" loading="lazy"></div>
+          {%- endif %}
+          <div class="head">
+            <img class="fav" src="{{ '/images/favicons/' | append: c.fav | relative_url }}" alt="" loading="lazy">
+            <span class="name">{{ c.name }}</span>
+          </div>
+          <div class="desc">{{ c.desc }}</div>
+          <div class="region">{{ c.region }}</div>
+        </a>

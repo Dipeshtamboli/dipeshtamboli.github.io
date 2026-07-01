@@ -1,36 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dipesh Tamboli</title>
-  <meta name="author" content="Dipesh Tamboli">
-  <meta name="description" content="Dipesh Tamboli — Research Scientist at Meta. Alignment, privacy-preserving training, and trustworthiness of large language and foundation models.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%232d6cdf%22/><text x=%2250%22 y=%2253%22 font-family=%22Arial,Helvetica,sans-serif%22 font-size=%2256%22 font-weight=%22bold%22 fill=%22%23ffffff%22 text-anchor=%22middle%22 dominant-baseline=%22central%22>DT</text></svg>">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="site.css?v=2">
-</head>
-<body>
-  <nav>
-    <div class="nav-inner">
-      <span class="brand"><a href="index.html">Dipesh Tamboli</a></span>
-      <div class="nav-links" id="navLinks">
-        <a href="#news">News</a>
-        <a href="#timeline">Timeline</a>
-        <a href="publications.html">Publications</a>
-        <a href="media.html">Media</a>
-        <a href="#awards">Awards</a>
-        <a href="docs/resume.pdf">CV</a>
-      </div>
-      <div class="nav-right">
-        <button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode" title="Toggle theme">🌙</button>
-        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button>
-      </div>
-    </div>
-  </nav>
-
+---
+layout: default
+nav: home
+favicon: solid
+title: Dipesh Tamboli
+---
   <main>
     <!-- HERO -->
     <header class="hero">
@@ -84,67 +57,7 @@
     <section id="timeline">
       <p class="eyebrow">Journey</p>
       <h2>Timeline</h2>
-      <div class="gt-scroll">
-      <div class="gt">
-        <div class="gt-line"></div>
-        <!-- continuous track: blue (undergrad) flows into gold (PhD) at 2021 -->
-        <div class="gt-band iitb" style="left:16%;width:34%"></div>
-        <div class="gt-band phd" style="left:50%;width:38%"></div>
-
-        <!-- internships (branch off the era band, on either side of the institution) -->
-        <div class="gt-node gi iitb" style="left:27%">
-          <div class="g-nm">IISc · VAL</div>
-          <div class="g-yr">2019</div>
-          <div class="g-chip"><img src="images/logos/iisc.png" alt="IISc Bangalore"></div>
-          <div class="stem"></div>
-        </div>
-        <div class="gt-node gi iitb" style="left:44%">
-          <div class="g-nm">AWL Inc.</div>
-          <div class="g-yr">2021</div>
-          <div class="g-chip"><img src="images/logos/awl.png" alt="AWL Inc."></div>
-          <div class="stem"></div>
-        </div>
-        <div class="gt-node gi phd" style="left:62%">
-          <div class="g-nm">Amazon Robotics</div>
-          <div class="g-yr">2023</div>
-          <div class="g-chip"><img src="images/logos/amazon.ico" alt="Amazon Robotics"></div>
-          <div class="stem"></div>
-        </div>
-        <div class="gt-node gi phd" style="left:78%">
-          <div class="g-nm">Meta (intern)</div>
-          <div class="g-yr">2024</div>
-          <div class="g-chip"><img src="images/logos/meta.webp" alt="Meta"></div>
-          <div class="stem"></div>
-        </div>
-
-        <!-- main track (institution centered inside its era band) -->
-        <div class="gt-node main" style="left:4%">
-          <div class="g-chip"><img src="images/logos/navodaya.png" alt="Jawahar Navodaya Vidyalaya"></div>
-          <div class="g-nm">Navodaya</div>
-          <div class="g-yr">2010–2015</div>
-        </div>
-        <div class="gt-node main" style="left:15%">
-          <div class="g-chip"><img src="images/logos/dakshana.png" alt="Dakshana Foundation"></div>
-          <div class="g-nm">Dakshana</div>
-          <div class="g-yr">2015–2017</div>
-        </div>
-        <div class="gt-node main" style="left:33%">
-          <div class="g-chip"><img src="images/logos/iitb.svg" alt="IIT Bombay"></div>
-          <div class="g-nm">IIT Bombay</div>
-          <div class="g-yr">2017–2021</div>
-        </div>
-        <div class="gt-node main" style="left:69%">
-          <div class="g-chip"><img src="images/logos/purdue.png" alt="Purdue University"></div>
-          <div class="g-nm">Purdue</div>
-          <div class="g-yr">2021–2025</div>
-        </div>
-        <div class="gt-node main" style="left:95%">
-          <div class="g-chip"><img src="images/logos/meta.webp" alt="Meta"></div>
-          <div class="g-nm">Meta</div>
-          <div class="g-yr">2025–present</div>
-        </div>
-      </div>
-      </div>
+{% include timeline.html %}
     </section>
 
     <!-- NEWS -->
@@ -152,10 +65,9 @@
       <p class="eyebrow">Recent</p>
       <h2>News</h2>
       <ul class="news">
-        <li><span class="date">2026</span><span><b>PRIVATEEDIT</b> published in IEEE Transactions on AI (patent-pending) — <a href="media.html">featured across national &amp; international press</a>.</span></li>
-        <li><span class="date">2026</span><span><b>TARo</b> accepted to ACL 2026 Findings; <b>BalancedDPO</b> published in TMLR.</span></li>
-        <li><span class="date">2026</span><span>Received the <b>ICML 2026 Gold Reviewer Award</b>.</span></li>
-        <li><span class="date">2025</span><span>Completed my PhD at Purdue and joined <b>Meta</b> as a Research Scientist.</span></li>
+        {%- for n in site.data.news %}
+        <li><span class="date">{{ n.date }}</span><span>{{ n.html }}</span></li>
+        {%- endfor %}
       </ul>
     </section>
 
@@ -165,62 +77,13 @@
       <h2>Selected Publications</h2>
       <p class="pub-venue" style="margin:-8px 0 18px">
         264 citations · h-index 9 · i10-index 9 —
-        <a href="https://scholar.google.com/citations?user=H8YEc-gAAAAJ&hl=en">Google Scholar</a>.
+        <a href="{{ site.scholar_url }}">Google Scholar</a>.
       </p>
 
-      <article class="pub">
-        <div class="venue-tag" data-type="journal">IEEE TAI<span class="yr">2026</span><span class="ty">Journal</span></div>
-        <div>
-          <p class="pub-title">PRIVATEEDIT: A Privacy-Preserving Pipeline for Face-Centric Generative Image Editing</p>
-          <p class="pub-authors"><b>Dipesh Tamboli</b>, Vineet Punyamoorty, Atharv Pawar, Vaneet Aggarwal</p>
-          <p class="pub-venue">IEEE Transactions on Artificial Intelligence (TAI)</p>
-          <div class="pub-meta">
-            <span class="chip">First author</span>
-            <span class="chip">Patent-pending</span>
-            <a class="chip link" href="media.html">In the news</a>
-            <a class="chip link" href="https://arxiv.org/abs/2603.03412">arXiv</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="pub">
-        <div class="venue-tag" data-type="journal">TMLR<span class="yr">2026</span><span class="ty">Journal</span></div>
-        <div>
-          <p class="pub-title">BalancedDPO: Adaptive Multi-Metric Alignment</p>
-          <p class="pub-authors"><b>Dipesh Tamboli</b>, Souradip Chakraborty, Aditya Malusare, Biplab Banerjee, Amrit Singh Bedi, Vaneet Aggarwal</p>
-          <p class="pub-venue">Transactions on Machine Learning Research (TMLR)</p>
-          <div class="pub-meta">
-            <span class="chip">First author</span>
-            <a class="chip link" href="https://arxiv.org/abs/2503.12575">arXiv</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="pub">
-        <div class="venue-tag" data-type="conf">ACL<span class="yr">2026</span><span class="ty">Conference</span></div>
-        <div>
-          <p class="pub-title">TARo: Token-level Adaptive Routing for LLM Test-time Alignment</p>
-          <p class="pub-authors">Arushi Rai, Qiang Zhang, Hanqing Zeng, Yunkai Zhang, <b>Dipesh Tamboli</b>, Xiangjun Fan, Zhuokai Zhao, Lizhu Zhang</p>
-          <p class="pub-venue">Findings of the Association for Computational Linguistics (ACL Findings)</p>
-          <div class="pub-meta">
-            <span class="chip">Meta</span>
-            <a class="chip link" href="https://arxiv.org/abs/2603.18411">arXiv</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="pub">
-        <div class="venue-tag" data-type="conf">ICML<span class="yr">2023</span><span class="ty">Conference</span></div>
-        <div>
-          <p class="pub-title">Multi-task Hierarchical Adversarial Inverse Reinforcement Learning</p>
-          <p class="pub-authors">Jiayu Chen, <b>Dipesh Tamboli</b>, Tian Lan, Vaneet Aggarwal</p>
-          <p class="pub-venue">International Conference on Machine Learning (ICML)</p>
-          <div class="pub-meta">
-            <span class="chip">28 citations</span>
-            <a class="chip link" href="https://proceedings.mlr.press/v202/chen23x.html">PMLR</a>
-          </div>
-        </div>
-      </article>
+      {%- assign featured = site.data.publications | where: "featured", true -%}
+      {%- for pub in featured %}
+{% include pub-card.html pub=pub home=true %}
+      {%- endfor %}
 
       <a class="back-link" href="publications.html">See all publications (20+) →</a>
     </section>
@@ -230,17 +93,9 @@
       <p class="eyebrow">Recognition</p>
       <h2>Awards</h2>
       <ul class="awards">
-        <li><span class="medal">🥇</span><span><b>ICML 2026</b> — Gold Reviewer Award</span></li>
-        <li><span class="medal">⭐</span><span><b>CVPR 2025</b> — Outstanding Reviewer</span></li>
-        <li><span class="medal">🏆</span><span><b>IEEE WIECON-ECE 2019</b> — Best Paper</span></li>
+        {%- for a in site.data.awards %}
+        <li><span class="medal">{{ a.medal }}</span><span>{{ a.html }}</span></li>
+        {%- endfor %}
       </ul>
     </section>
   </main>
-
-  <footer>
-    © <span id="yr">2026</span> Dipesh Tamboli
-  </footer>
-
-  <script src="theme.js?v=2"></script>
-</body>
-</html>

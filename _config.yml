@@ -1,0 +1,27 @@
+title: Dipesh Tamboli
+description: >-
+  Dipesh Tamboli — Research Scientist at Meta. Alignment, privacy-preserving
+  training, and trustworthiness of large language and foundation models.
+author: Dipesh Tamboli
+url: "https://dipeshtamboli.github.io"
+baseurl: ""
+
+# bump to force browsers to fetch fresh site.css / theme.js
+asset_ver: "3"
+
+scholar_url: "https://scholar.google.com/citations?user=H8YEc-gAAAAJ&hl=en"
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+sass:
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md
+  - .jekyll-cache
+  - "*.py"

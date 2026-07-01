@@ -1,0 +1,92 @@
+{
+  "bands": [
+    {
+      "cls": "iitb",
+      "left": 16,
+      "width": 34
+    },
+    {
+      "cls": "phd",
+      "left": 50,
+      "width": 38
+    }
+  ],
+  "nodes": [
+    {
+      "left": 27,
+      "name": "IISc · VAL",
+      "year": "2019",
+      "logo": "iisc.png",
+      "alt": "IISc Bangalore",
+      "lane": "gi",
+      "era": "iitb"
+    },
+    {
+      "left": 44,
+      "name": "AWL Inc.",
+      "year": "2021",
+      "logo": "awl.png",
+      "alt": "AWL Inc.",
+      "lane": "gi",
+      "era": "iitb"
+    },
+    {
+      "left": 62,
+      "name": "Amazon Robotics",
+      "year": "2023",
+      "logo": "amazon.ico",
+      "alt": "Amazon Robotics",
+      "lane": "gi",
+      "era": "phd"
+    },
+    {
+      "left": 78,
+      "name": "Meta (intern)",
+      "year": "2024",
+      "logo": "meta.webp",
+      "alt": "Meta",
+      "lane": "gi",
+      "era": "phd"
+    },
+    {
+      "left": 4,
+      "name": "Navodaya",
+      "year": "",
+      "logo": "navodaya.png",
+      "alt": "Jawahar Navodaya Vidyalaya",
+      "lane": "main"
+    },
+    {
+      "left": 15,
+      "name": "Dakshana",
+      "year": "",
+      "logo": "dakshana.png",
+      "alt": "Dakshana Foundation",
+      "lane": "main"
+    },
+    {
+      "left": 33,
+      "name": "IIT Bombay",
+      "year": "",
+      "logo": "iitb.svg",
+      "alt": "IIT Bombay",
+      "lane": "main"
+    },
+    {
+      "left": 69,
+      "name": "Purdue",
+      "year": "",
+      "logo": "purdue.png",
+      "alt": "Purdue University",
+      "lane": "main"
+    },
+    {
+      "left": 95,
+      "name": "Meta",
+      "year": "",
+      "logo": "meta.webp",
+      "alt": "Meta",
+      "lane": "main"
+    }
+  ]
+}

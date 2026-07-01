@@ -1,0 +1,36 @@
+{%- assign pub = include.pub -%}
+{%- case pub.type -%}
+  {%- when 'journal' %}{% assign ty = 'Journal' %}
+  {%- when 'conf' %}{% assign ty = 'Conference' %}
+  {%- when 'workshop' %}{% assign ty = 'Workshop' %}
+  {%- when 'preprint' %}{% assign ty = 'Preprint' %}
+  {%- when 'review' %}{% assign ty = 'Under review' %}
+  {%- when 'thesis' %}{% assign ty = 'Thesis' %}
+{%- endcase -%}
+{%- if include.home and pub.home -%}
+  {%- assign chips = pub.home.chips -%}
+  {%- assign links = pub.home.links -%}
+{%- else -%}
+  {%- assign chips = pub.chips -%}
+  {%- assign links = pub.links -%}
+{%- endif -%}
+      <article class="pub">
+        <div class="venue-tag" data-type="{{ pub.type }}">{{ pub.tag }}<span class="yr">{{ pub.year }}</span><span class="ty">{{ ty }}</span></div>
+        <div>
+          <p class="pub-title">{{ pub.title }}</p>
+          {%- if pub.authors %}
+          <p class="pub-authors">{{ pub.authors }}</p>
+          {%- endif %}
+          <p class="pub-venue">{{ pub.venue }}</p>
+          {%- if chips or links %}
+          <div class="pub-meta">
+            {%- for c in chips %}
+            <span class="chip">{{ c }}</span>
+            {%- endfor %}
+            {%- for l in links %}
+            <a class="chip link" href="{{ l.url }}">{{ l.label }}</a>
+            {%- endfor %}
+          </div>
+          {%- endif %}
+        </div>
+      </article>

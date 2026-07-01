@@ -1,0 +1,202 @@
+[
+  {
+    "title": "Mainstream &amp; high-authority",
+    "cards": [
+      {
+        "href": "https://www.digitaltrends.com/computing/ai-photo-editing-without-the-privacy-trade-off-is-almost-here/",
+        "thumb": "digitaltrends.jpg",
+        "fav": "digitaltrends.com.png",
+        "name": "Digital Trends",
+        "desc": "\"AI photo editing without the privacy trade-off is almost here\" — major US consumer-tech outlet.",
+        "region": "Mar 2026"
+      },
+      {
+        "href": "https://tech.yahoo.com/articles/ai-photo-editing-without-privacy-111752476.html",
+        "fav": "yahoo.com.png",
+        "name": "Yahoo Tech",
+        "desc": "Mainstream tech coverage, syndicated from Digital Trends.",
+        "region": "Mar 2026"
+      },
+      {
+        "href": "https://www.hindustantimes.com/world-news/us-news/4-indian-researchers-in-us-develop-unique-tech-to-prevent-id-leaks-during-ai-photo-editing-all-about-privateedit-101775549950332.html",
+        "thumb": "hindustantimes.jpg",
+        "fav": "hindustantimes.com.png",
+        "name": "Hindustan Times",
+        "desc": "\"4 Indian researchers in US develop unique tech to prevent ID leaks during AI photo editing\" — major Indian national daily.",
+        "region": "Apr 2026"
+      },
+      {
+        "href": "https://www.msn.com/en-in/technology/cybersecurity/4-indian-researchers-in-us-develop-unique-tech-to-prevent-id-leaks-during-ai-photo-editing-all-about-privateedit/ar-AA20k64B",
+        "fav": "msn.com.png",
+        "name": "MSN India",
+        "desc": "Syndicated feature on the MSN India news portal.",
+        "region": "Apr 2026"
+      },
+      {
+        "href": "https://newsindiatimes.com/purdue-university-indianas-indian-american-researchers-advance-science-on-multiple-fronts/",
+        "fav": "newsindiatimes.com.png",
+        "name": "News India Times",
+        "desc": "\"Purdue University, Indiana's Indian American researchers advance science on multiple fronts.\"",
+        "region": "Mar 2026"
+      },
+      {
+        "href": "https://www.eurekalert.org/news-releases/1119737",
+        "thumb": "eurekalert.jpg",
+        "fav": "eurekalert.org.png",
+        "name": "EurekAlert! (AAAS)",
+        "desc": "Premier science press wire — syndicated to journalists worldwide.",
+        "region": "Mar 2026"
+      },
+      {
+        "href": "https://techxplore.com/news/2026-03-privacy-tech-identity-leaking-ai.html",
+        "thumb": "techxplore.jpg",
+        "fav": "techxplore.com.png",
+        "name": "TechXplore (Science X)",
+        "desc": "\"‘Privacy by design’: Tech protects against identity leaking during AI photo editing.\"",
+        "region": "Mar 2026"
+      }
+    ]
+  },
+  {
+    "title": "Purdue official &amp; research",
+    "cards": [
+      {
+        "href": "https://www.purdue.edu/newsroom/2026/Q1/privacy-by-design-purdue-tech-protects-against-identity-leaking-during-ai-photo-editing/",
+        "thumb": "purdue.jpg",
+        "fav": "purdue.edu.png",
+        "name": "Purdue University Newsroom",
+        "desc": "The originating press release.",
+        "region": "Official"
+      },
+      {
+        "href": "https://engineering.purdue.edu/IE/news/2026/aggarwal-ai-patent",
+        "thumb": "purdue.jpg",
+        "fav": "engineering.purdue.edu.png",
+        "name": "Purdue IE News (patent)",
+        "desc": "Edwardson School of Industrial Engineering — patent feature on the Aggarwal group.",
+        "region": "Official"
+      },
+      {
+        "href": "https://engineering.purdue.edu/ECE/News/2026/privacy-by-design-purdue-tech-protects-against-identity-leaking-during-ai-photo-editing",
+        "thumb": "purdue-ece.jpg",
+        "fav": "engineering.purdue.edu.png",
+        "name": "Purdue ECE News",
+        "desc": "Elmore Family School of Electrical &amp; Computer Engineering department feature.",
+        "region": "Official"
+      },
+      {
+        "href": "https://www.cerias.purdue.edu/site/news/view/privacy-by-design-purdue-tech-protects-against-identity-leaking-during-ai-photo-editing",
+        "fav": "cerias.purdue.edu.png",
+        "name": "Purdue CERIAS",
+        "desc": "Center for Education and Research in Information Assurance and Security.",
+        "region": "Official"
+      },
+      {
+        "href": "https://www.purdueexponent.org/campus/general_news/purdue-researchers-develop-tools-for-ai-editing/article_7ebc07d3-c4ce-4781-8c49-9aeaf389c5c6.html",
+        "thumb": "exponent.jpg",
+        "fav": "purdueexponent.org.png",
+        "name": "The Purdue Exponent",
+        "desc": "\"Purdue researchers develop tool to keep personal images private during AI editing.\"",
+        "region": "Student press"
+      },
+      {
+        "href": "https://stories.prf.org/articles/",
+        "fav": "prf.org.png",
+        "name": "Purdue Research Foundation",
+        "desc": "Stories — tagged under \"Commercialize.\"",
+        "region": "Research"
+      },
+      {
+        "href": "https://www.eurekalert.org/multimedia/1119691",
+        "thumb": "purdue.jpg",
+        "fav": "eurekalert.org.png",
+        "name": "EurekAlert! Multimedia",
+        "desc": "Press photo of Vaneet Aggarwal and Dipesh Tamboli.",
+        "region": "Photo"
+      }
+    ]
+  },
+  {
+    "title": "Diaspora, regional &amp; aggregators",
+    "cards": [
+      {
+        "href": "https://www.starcitytv.com/news/purdue/purdue-researchers-develop-privacy-protection-system-for-ai-editing/article_f4da57c2-1cd1-4475-8d6a-732f13582953.html",
+        "thumb": "starcitytv.jpg",
+        "fav": "starcitytv.com.png",
+        "name": "Star City TV",
+        "desc": "Local Indiana TV coverage.",
+        "region": "Indiana"
+      },
+      {
+        "href": "https://americanbazaaronline.com/2026/03/18/indian-american-researchers-tool-protects-against-identity-leaking-during-ai-photo-editing-477065/",
+        "thumb": "americanbazaar.jpg",
+        "fav": "americanbazaaronline.com.png",
+        "name": "The American Bazaar",
+        "desc": "\"Indian American researchers' tool protects against identity leaking during AI photo editing.\"",
+        "region": "India / US"
+      },
+      {
+        "href": "https://newstral.com/en/article/en/1276860773/indian-american-researchers-tool-protects-against-identity-leaking-during-ai-photo",
+        "fav": "newstral.com.png",
+        "name": "Newstral",
+        "desc": "News aggregator syndication.",
+        "region": "Aggregator"
+      },
+      {
+        "href": "https://www.brightsurf.com/news/8X5DEOP1/privacy-by-design-purdue-tech-protects-against-identity-leaking-during-ai-photo-editing",
+        "fav": "brightsurf.com.png",
+        "name": "BrightSurf",
+        "desc": "Science-news aggregator.",
+        "region": "Science"
+      },
+      {
+        "href": "https://www.ucvradio.pe/noticias-del-mundo/cuatro-investigadores-indios-en-ee-uu-desarrollan-una-tecnologia-unica-para-evitar-filtraciones-de-identidad-durante-la-edicion-de-fotografias-con-ia-todo-sobre-privateedit/175041/",
+        "fav": "ucvradio.pe.png",
+        "name": "UCV Radio",
+        "desc": "Spanish-language coverage.",
+        "region": "Peru / ES"
+      },
+      {
+        "href": "https://www.rswebsols.com/news/four-indian-researchers-in-the-u-s-create-innovative-technology-to-safeguard-ids-during-ai-photo-editing-introducing-privateedit/",
+        "thumb": "rswebsols.jpg",
+        "fav": "rswebsols.com.png",
+        "name": "RS Web Solutions",
+        "desc": "In-depth feature on the \"Trust Slider\" and the project's Ghibli-trend origin story.",
+        "region": "Tech"
+      },
+      {
+        "href": "https://article-factory.ai/news/purdue-researchers-develop-privacy-preserving-ai-photo-editing-method",
+        "fav": "article-factory.ai.png",
+        "name": "Article-Factory.ai",
+        "desc": "\"Purdue researchers develop privacy-preserving AI photo editing method.\"",
+        "region": "Aggregator"
+      },
+      {
+        "href": "https://bravennow.com/news/us/privateedit-a-privacy-preserving-pipeline-for-face-centric-generative-image-editing",
+        "fav": "bravennow.com.png",
+        "name": "BravenNow",
+        "desc": "\"PrivateEdit: A Privacy-Preserving Pipeline for Face-Centric Generative Image Editing.\"",
+        "region": "Aggregator"
+      },
+      {
+        "href": "https://desitalkchicago.com/purdue-university-indianas-indian-american-researchers-advance-science-on-multiple-fronts/",
+        "fav": "desitalkchicago.com.png",
+        "name": "Desi Talk (Chicago)",
+        "desc": "Indian-American weekly — syndication of the News India Times feature.",
+        "region": "India / US"
+      }
+    ]
+  },
+  {
+    "title": "Earlier feature",
+    "cards": [
+      {
+        "href": "https://www.purdue.edu/academics/ogsps/professional-development/innovated-articles/index.html",
+        "fav": "purdue.edu.png",
+        "name": "Purdue InnovatED Magazine",
+        "desc": "Featured among Purdue's showcased graduate researchers (2024 edition).",
+        "region": "Apr 2024"
+      }
+    ]
+  }
+]

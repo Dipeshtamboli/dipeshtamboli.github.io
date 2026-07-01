@@ -1,0 +1,25 @@
+      <div class="gt-scroll">
+      <div class="gt">
+        <div class="gt-line"></div>
+        {%- for b in site.data.timeline.bands %}
+        <div class="gt-band {{ b.cls }}" style="left:{{ b.left }}%;width:{{ b.width }}%"></div>
+        {%- endfor %}
+
+        {%- for n in site.data.timeline.nodes %}{% if n.lane == 'gi' %}
+        <div class="gt-node gi {{ n.era }}" style="left:{{ n.left }}%">
+          <div class="g-nm">{{ n.name }}</div>
+          <div class="g-yr">{{ n.year }}</div>
+          <div class="g-chip"><img src="{{ '/images/logos/' | append: n.logo | relative_url }}" alt="{{ n.alt }}"></div>
+          <div class="stem"></div>
+        </div>
+        {%- endif %}{% endfor %}
+
+        {%- for n in site.data.timeline.nodes %}{% if n.lane == 'main' %}
+        <div class="gt-node main" style="left:{{ n.left }}%">
+          <div class="g-chip"><img src="{{ '/images/logos/' | append: n.logo | relative_url }}" alt="{{ n.alt }}"></div>
+          <div class="g-nm">{{ n.name }}</div>
+          <div class="g-yr">{{ n.year }}</div>
+        </div>
+        {%- endif %}{% endfor %}
+      </div>
+      </div>

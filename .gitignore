@@ -1,0 +1,10 @@
+_site/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+.sass-cache/
+Gemfile.lock
+
+# local-only
+Gemfile.local
+Gemfile.local.lock

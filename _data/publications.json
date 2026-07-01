@@ -1,0 +1,398 @@
+[
+  {
+    "type": "journal",
+    "tag": "IEEE TAI",
+    "year": "2026",
+    "title": "PRIVATEEDIT: A Privacy-Preserving Pipeline for Face-Centric Generative Image Editing",
+    "authors": "<b>Dipesh Tamboli</b>, Vineet Punyamoorty, Atharv Pawar, Vaneet Aggarwal",
+    "venue": "IEEE Transactions on Artificial Intelligence (TAI)",
+    "chips": [
+      "First author",
+      "Patent-pending"
+    ],
+    "links": [
+      {
+        "label": "In the news",
+        "url": "media.html"
+      },
+      {
+        "label": "IEEE",
+        "url": "https://ieeexplore.ieee.org/document/11422932"
+      },
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2603.03412"
+      },
+      {
+        "label": "Code",
+        "url": "https://github.com/Dipeshtamboli/PrivateEdit-Privacy-Preserving-GenAI"
+      }
+    ],
+    "section": "selected",
+    "featured": true,
+    "home": {
+      "chips": [
+        "First author",
+        "Patent-pending"
+      ],
+      "links": [
+        {
+          "label": "In the news",
+          "url": "media.html"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2603.03412"
+        }
+      ]
+    }
+  },
+  {
+    "type": "journal",
+    "tag": "TMLR",
+    "year": "2026",
+    "title": "BalancedDPO: Adaptive Multi-Metric Alignment",
+    "authors": "<b>Dipesh Tamboli</b>, Souradip Chakraborty, Aditya Malusare, Biplab Banerjee, Amrit Singh Bedi, Vaneet Aggarwal",
+    "venue": "Transactions on Machine Learning Research (TMLR)",
+    "chips": [
+      "First author",
+      "6 citations"
+    ],
+    "links": [
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2503.12575"
+      },
+      {
+        "label": "OpenReview",
+        "url": "https://openreview.net/forum?id=8HRID5VLQw"
+      },
+      {
+        "label": "Code",
+        "url": "https://github.com/Dipeshtamboli/BalancedDPO"
+      }
+    ],
+    "section": "selected",
+    "featured": true,
+    "home": {
+      "chips": [
+        "First author"
+      ],
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2503.12575"
+        }
+      ]
+    }
+  },
+  {
+    "type": "conf",
+    "tag": "ACL",
+    "year": "2026",
+    "title": "TARo: Token-level Adaptive Routing for LLM Test-time Alignment",
+    "authors": "Arushi Rai, Qiang Zhang, Hanqing Zeng, Yunkai Zhang, <b>Dipesh Tamboli</b>, Xiangjun Fan, Zhuokai Zhao, Lizhu Zhang",
+    "venue": "Findings of the Association for Computational Linguistics (ACL Findings)",
+    "chips": [
+      "Meta"
+    ],
+    "links": [
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2603.18411"
+      }
+    ],
+    "section": "selected",
+    "featured": true,
+    "home": {
+      "chips": [
+        "Meta"
+      ],
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2603.18411"
+        }
+      ]
+    }
+  },
+  {
+    "type": "workshop",
+    "tag": "NeurIPS-W",
+    "year": "2025",
+    "title": "Exploring System 1 and System 2 Communication for Latent Reasoning in LLMs",
+    "authors": "Julian Coda-Forno, Zhuokai Zhao, Qiang Zhang, <b>Dipesh Tamboli</b>, Weiwei Li, Xiangjun Fan, Lizhu Zhang, Eric Schulz, Hsiao-Ping Tseng",
+    "venue": "NeurIPS 2025 Workshop",
+    "chips": [
+      "2 citations"
+    ],
+    "links": [
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2510.00494"
+      }
+    ],
+    "section": "selected"
+  },
+  {
+    "type": "journal",
+    "tag": "IEEE JBHI",
+    "year": "2024",
+    "title": "Reinforced Sequential Decision-Making for Sepsis Treatment: The PosNegDM Framework with Mortality Classifier and Transformer",
+    "authors": "<b>Dipesh Tamboli</b>, Jiayu Chen, Kiran Pranesh Jotheeswaran, Denny Yu, Vaneet Aggarwal",
+    "venue": "IEEE Journal of Biomedical and Health Informatics (JBHI)",
+    "chips": [
+      "First author",
+      "15 citations"
+    ],
+    "links": [
+      {
+        "label": "IEEE",
+        "url": "https://ieeexplore.ieee.org/document/10472521/"
+      },
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2403.07309"
+      },
+      {
+        "label": "Code",
+        "url": "https://github.com/Dipeshtamboli/PosNegDM-Reinforced-Sequential-Decision-Making-for-Sepsis-Treatment"
+      }
+    ],
+    "section": "selected"
+  },
+  {
+    "type": "journal",
+    "tag": "Bioinf. Adv.",
+    "year": "2024",
+    "title": "Understanding the natural language of DNA using encoder–decoder foundation models with byte-level precision (ENBED)",
+    "authors": "Aditya Malusare, Harish Kothandaraman, <b>Dipesh Tamboli</b>, Nadia A. Lanman, Vaneet Aggarwal",
+    "venue": "Bioinformatics Advances (Oxford University Press)",
+    "chips": [
+      "12 citations"
+    ],
+    "links": [
+      {
+        "label": "DOI",
+        "url": "https://academic.oup.com/bioinformaticsadvances/article/4/1/vbae117/7731875"
+      },
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2311.02333"
+      }
+    ],
+    "section": "selected"
+  },
+  {
+    "type": "conf",
+    "tag": "ICML",
+    "year": "2023",
+    "title": "Multi-task Hierarchical Adversarial Inverse Reinforcement Learning",
+    "authors": "Jiayu Chen, <b>Dipesh Tamboli</b>, Tian Lan, Vaneet Aggarwal",
+    "venue": "International Conference on Machine Learning (ICML)",
+    "chips": [
+      "28 citations"
+    ],
+    "links": [
+      {
+        "label": "PMLR",
+        "url": "https://proceedings.mlr.press/v202/chen23x.html"
+      }
+    ],
+    "section": "selected",
+    "featured": true,
+    "home": {
+      "chips": [
+        "28 citations"
+      ],
+      "links": [
+        {
+          "label": "PMLR",
+          "url": "https://proceedings.mlr.press/v202/chen23x.html"
+        }
+      ]
+    }
+  },
+  {
+    "type": "conf",
+    "tag": "ICCV",
+    "year": "2023",
+    "title": "Domain Adaptive Few-Shot Open-Set Learning",
+    "authors": "Debabrata Pal, Deeptej More, Sai Bhargav Rongali, <b>Dipesh Tamboli</b>, Vaneet Aggarwal, Biplab Banerjee",
+    "venue": "IEEE/CVF International Conference on Computer Vision (ICCV)",
+    "chips": [
+      "19 citations"
+    ],
+    "links": [
+      {
+        "label": "CVF",
+        "url": "https://openaccess.thecvf.com/content/ICCV2023/html/Pal_Domain_Adaptive_Few-Shot_Open-Set_Learning_ICCV_2023_paper.html"
+      },
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2309.12814"
+      }
+    ],
+    "section": "selected"
+  },
+  {
+    "type": "review",
+    "tag": "TMLR",
+    "year": "'26",
+    "title": "BRIDLE",
+    "venue": "Under review at Transactions on Machine Learning Research",
+    "section": "review"
+  },
+  {
+    "type": "review",
+    "tag": "IEEE JBHI",
+    "year": "'26",
+    "title": "Care-X",
+    "venue": "Under review at IEEE Journal of Biomedical and Health Informatics",
+    "section": "review"
+  },
+  {
+    "type": "journal",
+    "tag": "J. Phys. D",
+    "year": "2020",
+    "title": "Fast design of plasmonic metasurfaces enabled by deep learning",
+    "authors": "Abhishek Mall, Abhijeet Patil, <b>Dipesh Tamboli</b>, Amit Sethi, Anshuman Kumar",
+    "venue": "Journal of Physics D: Applied Physics",
+    "chips": [
+      "52 citations"
+    ],
+    "links": [
+      {
+        "label": "DOI",
+        "url": "https://iopscience.iop.org/article/10.1088/1361-6463/abb33c/meta"
+      }
+    ],
+    "section": "earlier"
+  },
+  {
+    "type": "conf",
+    "tag": "ECCV",
+    "year": "2020",
+    "title": "Multi-source open-set deep adversarial domain adaptation",
+    "authors": "Sayan Rakshit, <b>Dipesh Tamboli</b>, Pratik S. Meshram, Biplab Banerjee, Gemma Roig, Subhasis Chaudhuri",
+    "venue": "European Conference on Computer Vision (ECCV)",
+    "chips": [
+      "49 citations"
+    ],
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123710732.pdf"
+      }
+    ],
+    "section": "earlier"
+  },
+  {
+    "type": "conf",
+    "tag": "WIECON",
+    "year": "2019",
+    "title": "Breast cancer histopathology image classification and localization using multiple instance learning",
+    "authors": "Abhijeet Patil, <b>Dipesh Tamboli</b>, Swati Meena, Deepak Anand, Amit Sethi",
+    "venue": "IEEE WIE Conference on Electrical and Computer Engineering (WIECON-ECE)",
+    "chips": [
+      "Best Paper",
+      "47 citations"
+    ],
+    "links": [
+      {
+        "label": "IEEE",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9019916/"
+      }
+    ],
+    "section": "earlier"
+  },
+  {
+    "type": "workshop",
+    "tag": "ICLR-W",
+    "year": "2020",
+    "title": "Image-based phenotyping of diverse rice (Oryza sativa L.) genotypes",
+    "authors": "Mukesh Kumar Vishal, <b>Dipesh Tamboli</b>, Abhijeet Patil, Rohit Saluja, Biplab Banerjee, Amit Sethi, et al.",
+    "venue": "ICLR Workshop on Computer Vision for Agriculture (CV4A)",
+    "chips": [
+      "12 citations"
+    ],
+    "links": [
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/pdf/2004.02498.pdf"
+      }
+    ],
+    "section": "earlier"
+  },
+  {
+    "type": "conf",
+    "tag": "IGARSS",
+    "year": "2022",
+    "title": "RSINet: Inpainting Remotely Sensed Images Using Triple GAN Framework",
+    "authors": "Advait Kumar*, <b>Dipesh Tamboli</b>*, Shivam Pande, Biplab Banerjee",
+    "venue": "International Geoscience and Remote Sensing Symposium (IGARSS)",
+    "chips": [
+      "Co-first author",
+      "5 citations"
+    ],
+    "section": "earlier"
+  },
+  {
+    "type": "conf",
+    "tag": "ICIP",
+    "year": "2020",
+    "title": "Saliency-driven class impressions for feature visualization of deep neural networks",
+    "authors": "Sravanti Addepalli*, <b>Dipesh Tamboli</b>*, R. Venkatesh Babu, Biplab Banerjee",
+    "venue": "IEEE International Conference on Image Processing (ICIP)",
+    "chips": [
+      "Co-first author",
+      "3 citations"
+    ],
+    "links": [
+      {
+        "label": "IEEE",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9190826"
+      }
+    ],
+    "section": "earlier"
+  },
+  {
+    "type": "preprint",
+    "tag": "Preprint",
+    "year": "2023",
+    "title": "Kuiper: Moderated Asynchronous Federated Learning on Heterogeneous Mobile Devices with Non-IID Data",
+    "authors": "<b>Dipesh Tamboli</b>, Pranjal Jain, Aabhas Sharma, Biplab Banerjee, Saurabh Bagchi, Somali Chaterji",
+    "venue": "Preprint",
+    "chips": [
+      "First author"
+    ],
+    "section": "other"
+  },
+  {
+    "type": "journal",
+    "tag": "EJWWP",
+    "year": "2023",
+    "title": "Prediction of the color change of surface thermally treated wood by artificial neural network",
+    "authors": "Jue Mo, <b>Dipesh Tamboli</b>, Eva Haviarova",
+    "venue": "European Journal of Wood and Wood Products",
+    "chips": [
+      "11 citations"
+    ],
+    "section": "other"
+  },
+  {
+    "type": "thesis",
+    "tag": "Thesis",
+    "year": "2025",
+    "title": "Towards Trustworthy Generative AI: Privacy, Alignment, and Applications",
+    "authors": "<b>Dipesh Tamboli</b>",
+    "venue": "PhD Dissertation, Purdue University",
+    "links": [
+      {
+        "label": "Purdue",
+        "url": "https://hammer.purdue.edu/articles/thesis/Towards_Trustworthy_Generative_AI_Privacy_Alignment_and_Applications/29424095"
+      }
+    ],
+    "section": "other"
+  }
+]
