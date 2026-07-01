@@ -30,12 +30,18 @@
       emo.textContent=faces[Math.floor(Math.random()*faces.length)];
       emo.style.transform='translate('+dx+'px,'+dy+'px) rotate('+(Math.random()*44-22)+'deg)';
     }
-    emo.addEventListener('mouseenter', hop);
-    emo.addEventListener('click', hop);
-    hero.addEventListener('pointermove', function(ev){
-      var r=emo.getBoundingClientRect();
-      if(Math.hypot(ev.clientX-(r.left+r.width/2), ev.clientY-(r.top+r.height/2)) < 72) hop();
-    });
+    // catch it (or tap on mobile) → secret page
+    var secret=emo.getAttribute('data-secret')||'private.html';
+    emo.addEventListener('click', function(){ window.location.href=secret; });
+    // only dodge on real cursors; touch devices just tap to open
+    var fine=window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    if(fine){
+      emo.addEventListener('mouseenter', hop);
+      hero.addEventListener('pointermove', function(ev){
+        var r=emo.getBoundingClientRect();
+        if(Math.hypot(ev.clientX-(r.left+r.width/2), ev.clientY-(r.top+r.height/2)) < 60) hop();
+      });
+    }
   }
 
   // mobile hamburger menu

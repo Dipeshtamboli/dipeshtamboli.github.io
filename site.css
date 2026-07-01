@@ -107,7 +107,6 @@ h2{font-size:1.45rem;font-weight:700;letter-spacing:-.02em;margin:0 0 22px}
   font-size:1.7rem;line-height:1;cursor:pointer;user-select:none;z-index:3;position:relative;
   transition:transform .3s cubic-bezier(.22,1,.36,1);will-change:transform;
 }
-@media(max-width:600px){.hero-emoji{display:none}}
 .hero-photo{flex:0 0 168px}
 .hero-photo img{
   width:168px;height:168px;object-fit:cover;border-radius:20px;
