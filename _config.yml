@@ -25,3 +25,6 @@ exclude:
   - README.md
   - .jekyll-cache
   - "*.py"
+  - "*.sh"
+  - private-content.html
+  - private-content.example.html
