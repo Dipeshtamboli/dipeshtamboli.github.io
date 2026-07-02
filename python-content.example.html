@@ -1,0 +1,29 @@
+<!-- Playground content shown AFTER the password unlocks python.html.
+     Copy to python-content.html, edit, then:  ./encrypt-page.sh python-content.html _data/python.json
+     python-content.html is git-ignored; only the AES ciphertext (_data/python.json) is committed. -->
+<p class="prose" style="margin-top:0">
+  Real Python, running entirely in <b>your browser</b> via
+  <a href="https://pyodide.org">Pyodide</a> (WebAssembly) — nothing runs on a server.
+  Edit the code and hit Run. The first run downloads the Python runtime, so give it a few seconds.
+</p>
+<div class="py-demo">
+  <textarea id="pyCode" class="py-code" spellcheck="false"># Live Python in the browser 🐍
+import sys
+print("Running Python", sys.version.split()[0], "via Pyodide/WebAssembly")
+
+def fib(n):
+    a, b = 0, 1
+    for _ in range(n):
+        a, b = b, a + b
+    return a
+
+print("First 12 Fibonacci:", [fib(i) for i in range(12)])
+print("Sum of squares 1..10:", sum(i * i for i in range(1, 11)))
+print("Hello from Dipesh's website!")
+</textarea>
+  <div class="py-bar">
+    <button id="pyRun" class="py-run">Run ▶</button>
+    <span id="pyStatus" class="py-status"></span>
+  </div>
+  <pre id="pyOut" class="py-out" aria-live="polite"></pre>
+</div>
