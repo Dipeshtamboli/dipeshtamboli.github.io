@@ -21,6 +21,7 @@ sitemap: false
   </main>
 
   <script id="payload" type="application/json">{{ site.data.python | jsonify }}</script>
+  <script>window.PUB_YEARS = {{ site.data.publications | map: "year" | jsonify }};</script>
   <script>
     (function () {
       var payload = JSON.parse(document.getElementById('payload').textContent || '{}');
@@ -85,10 +86,14 @@ sitemap: false
         runBtn.addEventListener('click', async function () {
           runBtn.disabled = true;
           outEl.textContent = '';
+          var figEl = document.getElementById('pyFig');
+          if (figEl) figEl.innerHTML = '';
           try {
             var py = await ensurePy();
-            try { await py.runPythonAsync(codeEl.value); }
-            catch (e) { outEl.textContent += '\n' + e; }
+            try { statusEl.textContent = 'loading packages…'; await py.loadPackagesFromImports(codeEl.value); } catch (_) {}
+            statusEl.textContent = 'running…';
+            try { await py.runPythonAsync(codeEl.value); statusEl.textContent = 'done'; }
+            catch (e) { outEl.textContent += '\n' + e; statusEl.textContent = ''; }
           } catch (e2) {
             statusEl.textContent = 'failed to load Python';
           }

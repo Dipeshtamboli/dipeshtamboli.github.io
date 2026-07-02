@@ -1,29 +1,50 @@
 <!-- Playground content shown AFTER the password unlocks python.html.
-     Copy to python-content.html, edit, then:  ./encrypt-page.sh python-content.html _data/python.json
-     python-content.html is git-ignored; only the AES ciphertext (_data/python.json) is committed. -->
+     Copy to python-content.html, edit, then:  ./encrypt-page.sh python-content.html _data/python.json -->
 <p class="prose" style="margin-top:0">
-  Real Python, running entirely in <b>your browser</b> via
-  <a href="https://pyodide.org">Pyodide</a> (WebAssembly) — nothing runs on a server.
-  Edit the code and hit Run. The first run downloads the Python runtime, so give it a few seconds.
+  Password unlocked ✓ — this runs <b>real Python in your browser</b> (Pyodide / WebAssembly, nothing on a server).
+  The default script plots my <b>publications per year</b> with matplotlib, from the site's own data.
+  Edit and Run anything. (First run downloads Python + matplotlib, ~15–20s.)
 </p>
 <div class="py-demo">
-  <textarea id="pyCode" class="py-code" spellcheck="false"># Live Python in the browser 🐍
-import sys
-print("Running Python", sys.version.split()[0], "via Pyodide/WebAssembly")
+  <textarea id="pyCode" class="py-code" spellcheck="false"># Publications per year — plotted live with matplotlib (Pyodide)
+import re, io, base64, collections
+import matplotlib
+matplotlib.use("AGG")
+import matplotlib.pyplot as plt
+from js import PUB_YEARS, document
 
-def fib(n):
-    a, b = 0, 1
-    for _ in range(n):
-        a, b = b, a + b
-    return a
+years = []
+for y in PUB_YEARS.to_py():
+    m = re.search(r"\d{4}", str(y))
+    if m:
+        years.append(int(m.group()))
 
-print("First 12 Fibonacci:", [fib(i) for i in range(12)])
-print("Sum of squares 1..10:", sum(i * i for i in range(1, 11)))
-print("Hello from Dipesh's website!")
+counts = collections.Counter(years)
+xs = list(range(min(counts), max(counts) + 1))
+ys = [counts.get(x, 0) for x in xs]
+
+fig, ax = plt.subplots(figsize=(7, 3.2))
+ax.bar([str(x) for x in xs], ys, color="#2d6cdf")
+ax.set_title("Publications per year")
+ax.set_ylabel("count")
+ax.spines[["top", "right"]].set_visible(False)
+for i, v in enumerate(ys):
+    if v:
+        ax.text(i, v + 0.04, str(v), ha="center", fontsize=8)
+fig.tight_layout()
+
+buf = io.BytesIO()
+fig.savefig(buf, format="png", dpi=140, transparent=True)
+data = base64.b64encode(buf.getvalue()).decode()
+document.getElementById("pyFig").innerHTML = (
+    '&lt;img alt="Publications per year" style="max-width:100%" src="data:image/png;base64,' + data + '"&gt;'
+)
+print("Plotted", sum(ys), "publications from", min(xs), "to", max(xs))
 </textarea>
   <div class="py-bar">
     <button id="pyRun" class="py-run">Run ▶</button>
     <span id="pyStatus" class="py-status"></span>
   </div>
+  <div id="pyFig" class="py-fig"></div>
   <pre id="pyOut" class="py-out" aria-live="polite"></pre>
 </div>

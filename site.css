@@ -338,6 +338,8 @@ footer{
 .py-run:hover{filter:brightness(1.06)}
 .py-run:disabled{opacity:.6;cursor:progress}
 .py-status{color:var(--muted);font-size:.85rem}
+.py-fig{margin:8px 0}
+.py-fig img{display:block;max-width:100%;border:1px solid var(--border);border-radius:12px;background:var(--surface-2)}
 .py-out{
   white-space:pre-wrap;word-break:break-word;min-height:60px;margin:0;
   font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.86rem;line-height:1.5;
