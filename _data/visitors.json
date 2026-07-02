@@ -1,10 +1,9 @@
 [
-  { "country": "United States", "code": "US", "lat": 38, "lng": -97, "count": 42 },
-  { "country": "India", "code": "IN", "lat": 22, "lng": 79, "count": 31 },
-  { "country": "United Kingdom", "code": "GB", "lat": 54, "lng": -2, "count": 9 },
-  { "country": "Germany", "code": "DE", "lat": 51, "lng": 10, "count": 7 },
-  { "country": "Japan", "code": "JP", "lat": 36, "lng": 138, "count": 5 },
-  { "country": "Canada", "code": "CA", "lat": 56, "lng": -106, "count": 4 },
-  { "country": "Australia", "code": "AU", "lat": -25, "lng": 133, "count": 3 },
-  { "country": "Singapore", "code": "SG", "lat": 1.35, "lng": 103.8, "count": 2 }
+  {
+    "country": "United States",
+    "code": "US",
+    "lat": 38,
+    "lng": -97,
+    "count": 1
+  }
 ]
