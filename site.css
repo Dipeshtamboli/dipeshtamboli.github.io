@@ -321,6 +321,10 @@ footer{
 .secret-dot{color:inherit;text-decoration:none;cursor:default}
 .secret-dot:hover{color:var(--accent)}
 
+/* visitor globe */
+.globe{width:100%;min-height:360px;border:1px solid var(--border);border-radius:16px;overflow:hidden;background:#05070d}
+.vlist{color:var(--muted);font-size:.85rem;margin:14px 0 20px;line-height:1.9;word-spacing:.1em}
+
 /* python playground */
 .py-demo{margin:18px 0 6px}
 .py-code{

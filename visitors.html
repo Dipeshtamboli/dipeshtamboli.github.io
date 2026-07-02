@@ -1,0 +1,59 @@
+---
+layout: default
+favicon: solid
+title: "Visitors — Dipesh Tamboli"
+description: "Where visitors to this site come from — privacy-friendly, country-level."
+---
+  <main>
+    <section>
+      <p class="eyebrow">Around the world</p>
+      <h2>Where visitors come from 🌍</h2>
+      <p class="pub-venue" style="margin:-8px 0 14px;font-style:normal">
+        Privacy-friendly, country-level counts — no cookies, no personal data (via
+        <a href="https://www.goatcounter.com">GoatCounter</a>), refreshed daily.
+        <span id="vtotal"></span>
+        <em id="vsample" style="color:var(--muted)"></em>
+      </p>
+      <div id="globe" class="globe" aria-label="Rotating globe of visitor locations"></div>
+      <p class="vlist" id="vlist"></p>
+      <a class="back-link" href="index.html">← Back to home</a>
+    </section>
+  </main>
+
+  <script id="vdata" type="application/json">{{ site.data.visitors | jsonify }}</script>
+  <script src="//unpkg.com/globe.gl"></script>
+  <script>
+    (function () {
+      var data = [];
+      try { data = JSON.parse(document.getElementById('vdata').textContent || '[]'); } catch (e) {}
+      var el = document.getElementById('globe');
+      var total = data.reduce(function (a, d) { return a + (d.count || 0); }, 0);
+      document.getElementById('vtotal').textContent = total
+        ? ('Total: ' + total + ' visits across ' + data.length + ' countries.') : 'No data yet.';
+      if (document.getElementById('vdata').textContent.indexOf('"count": 42') !== -1) {
+        document.getElementById('vsample').textContent = ' (showing sample data until analytics is live)';
+      }
+      var sorted = data.slice().sort(function (a, b) { return b.count - a.count; });
+      document.getElementById('vlist').textContent =
+        sorted.slice(0, 15).map(function (d) { return d.country + ' · ' + d.count; }).join('   ');
+
+      if (!window.Globe) { el.textContent = 'Could not load the globe library.'; return; }
+      var maxC = Math.max(1, Math.max.apply(null, data.map(function (d) { return d.count || 0; })));
+      var g = Globe()(el)
+        .backgroundColor('rgba(0,0,0,0)')
+        .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
+        .atmosphereColor('#5b9bff')
+        .pointsData(data)
+        .pointLat('lat').pointLng('lng')
+        .pointAltitude(function (d) { return 0.03 + (d.count / maxC) * 0.5; })
+        .pointRadius(0.6)
+        .pointColor(function () { return '#6ea0ff'; })
+        .pointLabel(function (d) { return d.country + ': ' + d.count; });
+      function size() {
+        var w = el.clientWidth;
+        g.width(w).height(Math.min(540, Math.max(360, w * 0.62)));
+      }
+      size(); window.addEventListener('resize', size);
+      var c = g.controls(); c.autoRotate = true; c.autoRotateSpeed = 0.55; c.enableZoom = true;
+    })();
+  </script>
