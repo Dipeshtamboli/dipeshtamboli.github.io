@@ -27,6 +27,11 @@ description: "BalancedDPO: Adaptive Multi-Metric Alignment — multi-metric pref
       <a class="back-link" href="{{ '/publications.html' | relative_url }}">← All publications</a>
     </header>
 
+    <figure class="paper-fig">
+      <img src="{{ '/images/papers/balanceddpo/teaser.jpg' | relative_url }}" alt="BalancedDPO teaser: multi-metric alignment vs single-metric models">
+      <figcaption>Single-metric alignment tends to win on one axis while failing another (e.g. aesthetics vs. prompt-alignment). BalancedDPO, which combines multiple preference metrics, stays strong across all of them.</figcaption>
+    </figure>
+
     <section>
       <h2>TL;DR</h2>
       <div class="prose">
@@ -51,6 +56,11 @@ description: "BalancedDPO: Adaptive Multi-Metric Alignment — multi-metric pref
         </ul>
       </div>
 
+      <figure class="paper-fig">
+        <img src="{{ '/images/papers/balanceddpo/overview.jpg' | relative_url }}" alt="BalancedDPO method overview: majority-vote consensus across preference metrics feeding DPO">
+        <figcaption>Method overview. Multiple preference scorers vote on the preferred image; the majority-vote consensus is fed into the DPO objective with dynamically updated reference models.</figcaption>
+      </figure>
+
       <h2>Results</h2>
       <div class="prose">
         <ul>
@@ -59,6 +69,11 @@ description: "BalancedDPO: Adaptive Multi-Metric Alignment — multi-metric pref
           <li>Ablations confirm both the <b>majority-vote aggregation</b> and <b>dynamic reference updating</b> drive the gains.</li>
         </ul>
       </div>
+
+      <figure class="paper-fig">
+        <img src="{{ '/images/papers/balanceddpo/comparison.jpg' | relative_url }}" alt="Qualitative comparison of BalancedDPO against baselines across preference metrics">
+        <figcaption>Qualitative comparison against single-metric and scalarized baselines. Where competing methods trade one metric for another, BalancedDPO produces images that score well across prompt-alignment, human preference, and aesthetics together.</figcaption>
+      </figure>
 
       <h2>Cite</h2>
       <div class="py-bar" style="margin-bottom:8px">
