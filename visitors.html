@@ -2,58 +2,99 @@
 layout: default
 favicon: solid
 title: "Visitors — Dipesh Tamboli"
-description: "Where visitors to this site come from — privacy-friendly, country-level."
+noindex: true
+sitemap: false
 ---
   <main>
-    <section>
+    <section id="lock">
       <p class="eyebrow">Around the world</p>
       <h2>Where visitors come from 🌍</h2>
-      <p class="pub-venue" style="margin:-8px 0 14px;font-style:normal">
-        Privacy-friendly, country-level counts — no cookies, no personal data (via
-        <a href="https://www.goatcounter.com">GoatCounter</a>), refreshed daily.
-        <span id="vtotal"></span>
-        <em id="vsample" style="color:var(--muted)"></em>
-      </p>
-      <div id="globe" class="globe" aria-label="Rotating globe of visitor locations"></div>
-      <p class="vlist" id="vlist"></p>
-      <a class="back-link" href="index.html">← Back to home</a>
+      <p class="prose" style="margin-top:0">This page is locked. Enter the password to view it.</p>
+      <form id="pform" class="lockform" autocomplete="off">
+        <input id="pw" type="password" placeholder="Password" aria-label="Password" autocomplete="current-password">
+        <button type="submit">Unlock</button>
+        <span id="err" class="lockerr" role="alert"></span>
+      </form>
     </section>
+
+    <section id="secret" hidden></section>
+
+    <p class="prose" style="margin-top:22px">
+      <a href="{{ '/python.html' | relative_url }}">🐍 Python playground</a>
+      &nbsp;·&nbsp;
+      <a href="{{ '/' | relative_url }}">← Back to home</a>
+    </p>
   </main>
 
-  <script id="vdata" type="application/json">{{ site.data.visitors | jsonify }}</script>
-  <script src="//unpkg.com/globe.gl"></script>
+  <script id="payload" type="application/json">{{ site.data.visitors_gate | jsonify }}</script>
+  <script>window.VDATA = {{ site.data.visitors | jsonify }};</script>
   <script>
     (function () {
-      var data = [];
-      try { data = JSON.parse(document.getElementById('vdata').textContent || '[]'); } catch (e) {}
-      var el = document.getElementById('globe');
-      var total = data.reduce(function (a, d) { return a + (d.count || 0); }, 0);
-      document.getElementById('vtotal').textContent = total
-        ? ('Total: ' + total + ' visits across ' + data.length + ' countries.') : 'No data yet.';
-      if (document.getElementById('vdata').textContent.indexOf('"count": 42') !== -1) {
-        document.getElementById('vsample').textContent = ' (showing sample data until analytics is live)';
-      }
-      var sorted = data.slice().sort(function (a, b) { return b.count - a.count; });
-      document.getElementById('vlist').textContent =
-        sorted.slice(0, 15).map(function (d) { return d.country + ' · ' + d.count; }).join('   ');
+      var payload = JSON.parse(document.getElementById('payload').textContent || '{}');
+      var form = document.getElementById('pform');
+      var err = document.getElementById('err');
+      var secret = document.getElementById('secret');
+      if (!payload.b64) { err.textContent = 'No content configured.'; return; }
 
-      if (!window.Globe) { el.textContent = 'Could not load the globe library.'; return; }
-      var maxC = Math.max(1, Math.max.apply(null, data.map(function (d) { return d.count || 0; })));
-      var g = Globe()(el)
-        .backgroundColor('rgba(0,0,0,0)')
-        .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
-        .atmosphereColor('#5b9bff')
-        .pointsData(data)
-        .pointLat('lat').pointLng('lng')
-        .pointAltitude(function (d) { return 0.03 + (d.count / maxC) * 0.5; })
-        .pointRadius(0.6)
-        .pointColor(function () { return '#6ea0ff'; })
-        .pointLabel(function (d) { return d.country + ': ' + d.count; });
-      function size() {
-        var w = el.clientWidth;
-        g.width(w).height(Math.min(540, Math.max(360, w * 0.62)));
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        err.textContent = '';
+        var pw = document.getElementById('pw').value || '';
+        try {
+          var raw = Uint8Array.from(atob(payload.b64.replace(/\s+/g, '')), function (c) { return c.charCodeAt(0); });
+          var salt = raw.slice(8, 16), ct = raw.slice(16);
+          var base = await crypto.subtle.importKey('raw', new TextEncoder().encode(pw), 'PBKDF2', false, ['deriveBits']);
+          var bits = new Uint8Array(await crypto.subtle.deriveBits(
+            { name: 'PBKDF2', salt: salt, iterations: 200000, hash: 'SHA-256' }, base, 384));
+          var key = await crypto.subtle.importKey('raw', bits.slice(0, 32), { name: 'AES-CBC' }, false, ['decrypt']);
+          var buf = await crypto.subtle.decrypt({ name: 'AES-CBC', iv: bits.slice(32, 48) }, key, ct);
+          secret.innerHTML = new TextDecoder().decode(buf);
+          secret.hidden = false;
+          document.getElementById('lock').hidden = true;
+          history.replaceState(null, '', '#unlocked');
+          initGlobe();
+        } catch (ex) {
+          err.textContent = 'Wrong password.';
+          document.getElementById('pw').select();
+        }
+      });
+
+      function loadGlobeScript() {
+        return new Promise(function (res, rej) {
+          if (window.Globe) return res();
+          var s = document.createElement('script');
+          s.src = '//unpkg.com/globe.gl';
+          s.onload = function () { res(); };
+          s.onerror = rej;
+          document.head.appendChild(s);
+        });
       }
-      size(); window.addEventListener('resize', size);
-      var c = g.controls(); c.autoRotate = true; c.autoRotateSpeed = 0.55; c.enableZoom = true;
+
+      async function initGlobe() {
+        var el = document.getElementById('globe');
+        if (!el) return;
+        var data = window.VDATA || [];
+        var total = data.reduce(function (a, d) { return a + (d.count || 0); }, 0);
+        var vt = document.getElementById('vtotal');
+        if (vt) vt.textContent = total ? ('Total: ' + total + ' visits across ' + data.length + ' countries.') : 'No data yet.';
+        var sorted = data.slice().sort(function (a, b) { return b.count - a.count; });
+        var vl = document.getElementById('vlist');
+        if (vl) vl.textContent = sorted.slice(0, 15).map(function (d) { return d.country + ' · ' + d.count; }).join('   ');
+        try { await loadGlobeScript(); } catch (e) { el.textContent = 'Could not load the globe library.'; return; }
+        var maxC = Math.max(1, Math.max.apply(null, data.map(function (d) { return d.count || 0; })));
+        var g = Globe()(el)
+          .backgroundColor('rgba(0,0,0,0)')
+          .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
+          .atmosphereColor('#5b9bff')
+          .pointsData(data)
+          .pointLat('lat').pointLng('lng')
+          .pointAltitude(function (d) { return 0.03 + (d.count / maxC) * 0.5; })
+          .pointRadius(0.6)
+          .pointColor(function () { return '#6ea0ff'; })
+          .pointLabel(function (d) { return d.country + ': ' + d.count; });
+        function size() { var w = el.clientWidth; g.width(w).height(Math.min(540, Math.max(360, w * 0.62))); }
+        size(); window.addEventListener('resize', size);
+        var c = g.controls(); c.autoRotate = true; c.autoRotateSpeed = 0.55; c.enableZoom = true;
+      }
     })();
   </script>

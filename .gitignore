@@ -11,3 +11,5 @@ Gemfile.local.lock
 
 # private page plaintext (keep local; only ciphertext committed)
 python-content.html
+
+visitors-content.html
