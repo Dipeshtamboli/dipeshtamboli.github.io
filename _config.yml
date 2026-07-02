@@ -13,7 +13,7 @@ scholar_url: "https://scholar.google.com/citations?user=H8YEc-gAAAAJ&hl=en"
 
 # GoatCounter privacy-friendly analytics: set to your site code (e.g. "dipeshtamboli")
 # after signing up at https://www.goatcounter.com/signup — empty disables tracking.
-goatcounter_code: ""
+goatcounter_code: "dipeshtamboli"
 
 plugins:
   - jekyll-seo-tag

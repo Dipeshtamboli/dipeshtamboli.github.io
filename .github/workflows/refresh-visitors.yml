@@ -17,7 +17,7 @@ jobs:
           python-version: "3.x"
       - name: Fetch GoatCounter locations
         env:
-          GOATCOUNTER_CODE: ${{ vars.GOATCOUNTER_CODE }}
+          GOATCOUNTER_CODE: ${{ vars.GOATCOUNTER_CODE || 'dipeshtamboli' }}
           GOATCOUNTER_TOKEN: ${{ secrets.GOATCOUNTER_TOKEN }}
         run: python scripts/fetch_visitors.py
       - name: Commit if changed
