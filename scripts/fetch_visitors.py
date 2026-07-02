@@ -43,6 +43,10 @@ for row in rows:
     name, lat, lng = C[iso]
     out.append({"country": row.get("name") or name, "code": iso, "lat": lat, "lng": lng, "count": cnt})
 
+if not out:
+    print("GoatCounter returned no country data yet — keeping existing _data/visitors.json.")
+    sys.exit(0)
+
 out.sort(key=lambda d: -d["count"])
 os.makedirs("_data", exist_ok=True)
 with open("_data/visitors.json", "w") as f:
