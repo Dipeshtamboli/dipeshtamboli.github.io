@@ -10,6 +10,10 @@ const ALLOW = [
 const KEY = "agg";
 const MAX_CITIES = 5000;   // cap stored distinct cities
 const MAX_RETURN = 400;    // cap points sent to the globe
+const THROTTLE_MS = 5000;  // per-isolate: at most one KV write per city per 5s (best-effort)
+
+// in-memory (per-isolate) last-write timestamps — cheap throttle against /hit floods
+const lastWrite = new Map();
 
 function corsHeaders(origin) {
   const allowed = ALLOW.includes(origin) ? origin : ALLOW[0];
@@ -62,6 +66,16 @@ export default {
       }
 
       const k = (country + "|" + city).toLowerCase();
+
+      // best-effort throttle: skip if this city was written very recently by this isolate
+      const now = Date.now();
+      const prev = lastWrite.get(k);
+      if (prev && now - prev < THROTTLE_MS) {
+        return new Response(null, { status: 204, headers });
+      }
+      lastWrite.set(k, now);
+      if (lastWrite.size > 10000) lastWrite.clear();
+
       const raw = await env.VISITORS.get(KEY);
       const map = raw ? JSON.parse(raw) : {};
       if (map[k]) {

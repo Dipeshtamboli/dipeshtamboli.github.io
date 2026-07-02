@@ -11,8 +11,12 @@ npm install -g wrangler        # or: npx wrangler ...
 cd worker
 wrangler login                 # opens browser to authorize your Cloudflare account
 
-# create the KV store and copy the printed id into wrangler.toml (id = "...")
+# (if you forked this) edit the ALLOW array at the top of index.js so it lists YOUR
+# site origin (e.g. https://<your-user>.github.io) — otherwise /hit is origin-gated out.
+
 wrangler kv namespace create VISITORS
+# ^ prints an id inside a [[kv_namespaces]] block. Copy ONLY that id string into the
+#   existing  id = "REPLACE_WITH_KV_NAMESPACE_ID"  line in wrangler.toml (don't add a 2nd block).
 
 wrangler deploy                # prints your Worker URL, e.g.
                                #   https://visitor-globe.<your-subdomain>.workers.dev

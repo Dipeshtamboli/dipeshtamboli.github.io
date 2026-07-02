@@ -80,7 +80,7 @@ sitemap: false
         if (W) {
           try {
             var r = await fetch(W.replace(/\/$/, '') + '/stats', { mode: 'cors' });
-            if (r.ok) { var j = await r.json(); if (Array.isArray(j) && j.length) return { mode: 'cities', data: j }; }
+            if (r.ok) { var j = await r.json(); if (Array.isArray(j)) return { mode: 'cities', data: j }; }
           } catch (e) {}
         }
         return { mode: 'countries', data: window.VDATA || [] };
