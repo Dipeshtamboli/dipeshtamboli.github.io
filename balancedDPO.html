@@ -1,0 +1,100 @@
+---
+layout: default
+favicon: gradient
+permalink: /balancedDPO/
+title: "BalancedDPO — Dipesh Tamboli"
+description: "BalancedDPO: Adaptive Multi-Metric Alignment — multi-metric preference alignment for text-to-image diffusion models (TMLR 2026)."
+---
+  <main>
+    <header class="page-head">
+      <p class="eyebrow">Publication · TMLR 2026</p>
+      <h1>BalancedDPO: Adaptive Multi-Metric Alignment</h1>
+      <p class="pub-authors" style="margin:2px 0 6px">
+        <b>Dipesh Tamboli</b>, Souradip Chakraborty, Aditya Malusare, Biplab Banerjee, Amrit Singh Bedi, Vaneet Aggarwal
+      </p>
+      <p class="pub-venue" style="font-style:normal;margin:0 0 12px">
+        Transactions on Machine Learning Research (TMLR), 2026 · <span class="chip">First author</span>
+      </p>
+      <div class="pub-meta" style="margin-bottom:6px">
+        <a class="chip link" href="https://arxiv.org/abs/2503.12575">arXiv</a>
+        <a class="chip link" href="https://arxiv.org/pdf/2503.12575">PDF</a>
+        <a class="chip link" href="https://arxiv.org/html/2503.12575">HTML</a>
+        <a class="chip link" href="https://openreview.net/forum?id=8HRID5VLQw">OpenReview (TMLR)</a>
+        <a class="chip link" href="https://github.com/Dipeshtamboli/BalancedDPO">Code</a>
+        <a class="chip link" href="https://doi.org/10.48550/arXiv.2503.12575">DOI</a>
+        <a class="chip link" href="https://www.semanticscholar.org/arxiv/2503.12575">Semantic Scholar</a>
+      </div>
+      <a class="back-link" href="{{ '/publications.html' | relative_url }}">← All publications</a>
+    </header>
+
+    <section>
+      <h2>TL;DR</h2>
+      <div class="prose">
+        <p>
+          Aligning text-to-image diffusion models with human preferences usually means optimizing a
+          <b>single</b> reward — aesthetics, or a CLIP/semantic score, or a human-preference model.
+          That over-fits whichever metric you pick and neglects the others. <b>BalancedDPO</b> aligns to
+          <b>several preference metrics at once</b> inside the Direct Preference Optimization (DPO) framework:
+          instead of averaging rewards (where scale differences let one metric dominate), it takes a
+          <b>majority vote</b> among multiple preference scorers to decide the preferred image, and feeds that
+          consensus into DPO with <b>dynamically updated reference models</b> for more stable training.
+        </p>
+      </div>
+
+      <h2>Key ideas</h2>
+      <div class="prose">
+        <ul>
+          <li><b>The problem:</b> multiple, sometimes conflicting metrics (semantic consistency, aesthetics, human preference). Single-metric or scalarized (weighted-sum) rewards bias the model toward one criterion.</li>
+          <li><b>Majority-vote consensus:</b> aggregate agreement across diverse scorers in the <em>preference</em> space rather than mixing raw reward values — sidestepping reward-scale conflicts.</li>
+          <li><b>Consensus-in-the-loop DPO:</b> the vote is integrated directly into the DPO objective, with dynamic reference-model updates, yielding stabler gradient directions across heterogeneous metrics.</li>
+          <li><b>Simple &amp; scalable:</b> keeps the standard DPO pipeline — no separate reward model to train at inference.</li>
+        </ul>
+      </div>
+
+      <h2>Results</h2>
+      <div class="prose">
+        <ul>
+          <li>Consistently higher preference <b>win rates</b> over baselines on <b>Pick-a-Pic</b>, <b>PartiPrompt</b>, and <b>HPD</b>.</li>
+          <li>Holds across backbones: <b>Stable Diffusion 1.5</b>, <b>SD 2.1</b>, and <b>SDXL</b>.</li>
+          <li>Ablations confirm both the <b>majority-vote aggregation</b> and <b>dynamic reference updating</b> drive the gains.</li>
+        </ul>
+      </div>
+
+      <h2>Cite</h2>
+      <div class="py-bar" style="margin-bottom:8px">
+        <button id="bibCopy" class="py-run">Copy BibTeX</button>
+        <span id="bibStatus" class="py-status"></span>
+      </div>
+      <pre id="bibtex" class="py-out">@article{tamboli2026balanceddpo,
+  title   = {BalancedDPO: Adaptive Multi-Metric Alignment},
+  author  = {Tamboli, Dipesh and Chakraborty, Souradip and Malusare, Aditya and
+             Banerjee, Biplab and Bedi, Amrit Singh and Aggarwal, Vaneet},
+  journal = {Transactions on Machine Learning Research},
+  year    = {2026},
+  url     = {https://openreview.net/forum?id=8HRID5VLQw}
+}</pre>
+
+      <a class="back-link" href="{{ '/' | relative_url }}">← Back to home</a>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('bibCopy');
+      var pre = document.getElementById('bibtex');
+      var st = document.getElementById('bibStatus');
+      if (!btn) return;
+      btn.addEventListener('click', function () {
+        var text = pre.textContent;
+        function done() { st.textContent = 'Copied ✓'; setTimeout(function () { st.textContent = ''; }, 2000); }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(done, function () { st.textContent = 'Copy failed'; });
+        } else {
+          var r = document.createRange(); r.selectNode(pre);
+          var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+          try { document.execCommand('copy'); done(); } catch (e) { st.textContent = 'Copy failed'; }
+          s.removeAllRanges();
+        }
+      });
+    })();
+  </script>
