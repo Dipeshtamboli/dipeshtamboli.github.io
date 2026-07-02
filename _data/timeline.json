@@ -51,7 +51,7 @@
     {
       "left": 4,
       "name": "Navodaya",
-      "year": "",
+      "year": "2010–2015",
       "logo": "navodaya.png",
       "alt": "Jawahar Navodaya Vidyalaya",
       "lane": "main"
@@ -59,7 +59,7 @@
     {
       "left": 15,
       "name": "Dakshana",
-      "year": "",
+      "year": "2015–2017",
       "logo": "dakshana.png",
       "alt": "Dakshana Foundation",
       "lane": "main"
@@ -67,7 +67,7 @@
     {
       "left": 33,
       "name": "IIT Bombay",
-      "year": "",
+      "year": "2017–2021",
       "logo": "iitb.svg",
       "alt": "IIT Bombay",
       "lane": "main"
@@ -75,7 +75,7 @@
     {
       "left": 69,
       "name": "Purdue",
-      "year": "",
+      "year": "2021–2025",
       "logo": "purdue.png",
       "alt": "Purdue University",
       "lane": "main"
@@ -83,7 +83,7 @@
     {
       "left": 95,
       "name": "Meta",
-      "year": "",
+      "year": "2025–present",
       "logo": "meta.webp",
       "alt": "Meta",
       "lane": "main"
