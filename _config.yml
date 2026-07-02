@@ -7,13 +7,17 @@ url: "https://dipeshtamboli.github.io"
 baseurl: ""
 
 # bump to force browsers to fetch fresh site.css / theme.js
-asset_ver: "12"
+asset_ver: "13"
 
 scholar_url: "https://scholar.google.com/citations?user=H8YEc-gAAAAJ&hl=en"
 
 # GoatCounter privacy-friendly analytics: set to your site code (e.g. "dipeshtamboli")
 # after signing up at https://www.goatcounter.com/signup — empty disables tracking.
 goatcounter_code: "dipeshtamboli"
+
+# Cloudflare Worker URL for the city-level visitor globe (see worker/README.md).
+# Empty = globe falls back to GoatCounter country data; no beacon is sent.
+visitor_worker: ""
 
 plugins:
   - jekyll-seo-tag
@@ -34,3 +38,4 @@ exclude:
   - python-content.example.html
   - visitors-content.html
   - visitors-content.example.html
+  - worker

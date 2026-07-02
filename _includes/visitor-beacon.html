@@ -1,0 +1,10 @@
+{%- if site.visitor_worker and site.visitor_worker != "" -%}
+<script>
+  (function () {
+    try {
+      fetch("{{ site.visitor_worker }}".replace(/\/$/, "") + "/hit",
+            { method: "POST", mode: "cors", keepalive: true }).catch(function () {});
+    } catch (e) {}
+  })();
+</script>
+{%- endif -%}

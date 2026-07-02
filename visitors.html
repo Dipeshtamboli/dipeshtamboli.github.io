@@ -70,16 +70,34 @@ sitemap: false
         });
       }
 
+      function esc(s) {
+        return (s == null ? '' : String(s)).replace(/[&<>"']/g, function (c) {
+          return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+        });
+      }
+      async function getData() {
+        var W = "{{ site.visitor_worker }}";
+        if (W) {
+          try {
+            var r = await fetch(W.replace(/\/$/, '') + '/stats', { mode: 'cors' });
+            if (r.ok) { var j = await r.json(); if (Array.isArray(j) && j.length) return { mode: 'cities', data: j }; }
+          } catch (e) {}
+        }
+        return { mode: 'countries', data: window.VDATA || [] };
+      }
       async function initGlobe() {
         var el = document.getElementById('globe');
         if (!el) return;
-        var data = window.VDATA || [];
+        var res = await getData();
+        var data = (res.data || []).filter(function (d) { return d && d.lat != null && d.lng != null; });
         var total = data.reduce(function (a, d) { return a + (d.count || 0); }, 0);
         var vt = document.getElementById('vtotal');
-        if (vt) vt.textContent = total ? ('Total: ' + total + ' visits across ' + data.length + ' countries.') : 'No data yet.';
+        if (vt) vt.textContent = total ? ('Total: ' + total + ' visits · ' + data.length + ' ' + res.mode) : 'No data yet.';
         var sorted = data.slice().sort(function (a, b) { return b.count - a.count; });
         var vl = document.getElementById('vlist');
-        if (vl) vl.textContent = sorted.slice(0, 15).map(function (d) { return d.country + ' · ' + d.count; }).join('   ');
+        if (vl) vl.textContent = sorted.slice(0, 15).map(function (d) {
+          return (d.city ? d.city + ', ' : '') + d.country + ' · ' + d.count;
+        }).join('   ');
         try { await loadGlobeScript(); } catch (e) { el.textContent = 'Could not load the globe library.'; return; }
         var maxC = Math.max(1, Math.max.apply(null, data.map(function (d) { return d.count || 0; })));
         var g = Globe()(el)
@@ -88,10 +106,13 @@ sitemap: false
           .atmosphereColor('#5b9bff')
           .pointsData(data)
           .pointLat('lat').pointLng('lng')
-          .pointAltitude(function (d) { return 0.03 + (d.count / maxC) * 0.5; })
-          .pointRadius(0.6)
+          .pointAltitude(function (d) { return 0.02 + (d.count / maxC) * 0.5; })
+          .pointRadius(res.mode === 'cities' ? 0.35 : 0.6)
           .pointColor(function () { return '#6ea0ff'; })
-          .pointLabel(function (d) { return d.country + ': ' + d.count; });
+          .pointLabel(function (d) {
+            return '<div style="background:rgba(0,0,0,.72);padding:3px 7px;border-radius:6px;font:12px sans-serif;color:#fff">'
+              + esc(d.city ? d.city + ', ' + d.country : d.country) + ': ' + (d.count | 0) + '</div>';
+          });
         function size() { var w = el.clientWidth; g.width(w).height(Math.min(540, Math.max(360, w * 0.62))); }
         size(); window.addEventListener('resize', size);
         var c = g.controls(); c.autoRotate = true; c.autoRotateSpeed = 0.55; c.enableZoom = true;
