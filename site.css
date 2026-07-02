@@ -320,3 +320,27 @@ footer{
 }
 .secret-dot{color:inherit;text-decoration:none;cursor:default}
 .secret-dot:hover{color:var(--accent)}
+
+/* python playground */
+.py-demo{margin:18px 0 6px}
+.py-code{
+  width:100%;box-sizing:border-box;min-height:200px;resize:vertical;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.5;
+  padding:14px 16px;border:1px solid var(--border);border-radius:12px;
+  background:var(--surface-2);color:var(--text);tab-size:4;
+}
+.py-code:focus{outline:none;border-color:var(--accent)}
+.py-bar{display:flex;align-items:center;gap:12px;margin:10px 0}
+.py-run{
+  padding:9px 18px;border:1px solid var(--accent);border-radius:10px;cursor:pointer;
+  background:var(--accent);color:#fff;font-weight:600;font-size:.9rem;transition:.15s;
+}
+.py-run:hover{filter:brightness(1.06)}
+.py-run:disabled{opacity:.6;cursor:progress}
+.py-status{color:var(--muted);font-size:.85rem}
+.py-out{
+  white-space:pre-wrap;word-break:break-word;min-height:60px;margin:0;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.86rem;line-height:1.5;
+  padding:14px 16px;border:1px solid var(--border);border-radius:12px;
+  background:var(--surface);color:var(--text);
+}

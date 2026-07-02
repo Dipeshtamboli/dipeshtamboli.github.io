@@ -1,0 +1,84 @@
+---
+layout: default
+favicon: solid
+title: "Python — Dipesh Tamboli"
+noindex: true
+sitemap: false
+---
+  <main>
+    <section>
+      <p class="eyebrow">You found the easter egg</p>
+      <h2>Python 🐍</h2>
+      <p class="prose" style="margin-top:0">
+        Real Python, running entirely in <b>your browser</b> via
+        <a href="https://pyodide.org">Pyodide</a> (WebAssembly) — nothing runs on a server.
+        Edit the code and hit Run. First run downloads the Python runtime, so give it a few seconds.
+      </p>
+
+      <div class="py-demo">
+        <textarea id="pyCode" class="py-code" spellcheck="false"># Live Python in the browser 🐍
+import sys
+print("Running Python", sys.version.split()[0], "via Pyodide/WebAssembly")
+
+def fib(n):
+    a, b = 0, 1
+    for _ in range(n):
+        a, b = b, a + b
+    return a
+
+print("First 12 Fibonacci:", [fib(i) for i in range(12)])
+print("Sum of squares 1..10:", sum(i * i for i in range(1, 11)))
+
+name = "Dipesh"
+print(f"Hello from {name}'s website!")
+</textarea>
+        <div class="py-bar">
+          <button id="pyRun" class="py-run">Run ▶</button>
+          <span id="pyStatus" class="py-status"></span>
+        </div>
+        <pre id="pyOut" class="py-out" aria-live="polite"></pre>
+      </div>
+
+      <a class="back-link" href="index.html">← Back to home</a>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js"></script>
+  <script>
+    (function () {
+      var runBtn = document.getElementById('pyRun');
+      var codeEl = document.getElementById('pyCode');
+      var outEl = document.getElementById('pyOut');
+      var statusEl = document.getElementById('pyStatus');
+      var pyPromise = null;
+
+      function loadPy() {
+        if (!pyPromise) {
+          statusEl.textContent = 'loading Python…';
+          pyPromise = loadPyodide().then(function (py) {
+            py.setStdout({ batched: function (s) { outEl.textContent += s; } });
+            py.setStderr({ batched: function (s) { outEl.textContent += s; } });
+            statusEl.textContent = 'ready';
+            return py;
+          });
+        }
+        return pyPromise;
+      }
+
+      runBtn.addEventListener('click', async function () {
+        runBtn.disabled = true;
+        outEl.textContent = '';
+        try {
+          var py = await loadPy();
+          try {
+            await py.runPythonAsync(codeEl.value);
+          } catch (err) {
+            outEl.textContent += '\n' + err;
+          }
+        } catch (e) {
+          statusEl.textContent = 'failed to load Python';
+        }
+        runBtn.disabled = false;
+      });
+    })();
+  </script>

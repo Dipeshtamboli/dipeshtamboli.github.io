@@ -7,7 +7,7 @@ url: "https://dipeshtamboli.github.io"
 baseurl: ""
 
 # bump to force browsers to fetch fresh site.css / theme.js
-asset_ver: "7"
+asset_ver: "8"
 
 scholar_url: "https://scholar.google.com/citations?user=H8YEc-gAAAAJ&hl=en"
 
@@ -25,6 +25,3 @@ exclude:
   - README.md
   - .jekyll-cache
   - "*.py"
-  - "*.sh"
-  - private-content.html
-  - private-content.example.html

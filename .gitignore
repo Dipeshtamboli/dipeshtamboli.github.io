@@ -8,6 +8,3 @@ Gemfile.lock
 # local-only
 Gemfile.local
 Gemfile.local.lock
-
-# private page plaintext (keep local; only ciphertext in _data/private.json is committed)
-private-content.html
