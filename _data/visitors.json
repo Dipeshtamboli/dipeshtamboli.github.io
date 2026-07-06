@@ -4,13 +4,13 @@
     "code": "US",
     "lat": 38,
     "lng": -97,
-    "count": 18
+    "count": 21
   },
   {
     "country": "India",
     "code": "IN",
     "lat": 22,
     "lng": 79,
-    "count": 2
+    "count": 3
   }
 ]
