@@ -4,7 +4,7 @@
     "code": "US",
     "lat": 38,
     "lng": -97,
-    "count": 21
+    "count": 24
   },
   {
     "country": "India",
@@ -12,5 +12,12 @@
     "lat": 22,
     "lng": 79,
     "count": 3
+  },
+  {
+    "country": "South Korea",
+    "code": "KR",
+    "lat": 37,
+    "lng": 127.5,
+    "count": 1
   }
 ]
