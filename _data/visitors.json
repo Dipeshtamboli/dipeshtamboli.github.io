@@ -4,7 +4,14 @@
     "code": "US",
     "lat": 38,
     "lng": -97,
-    "count": 24
+    "count": 25
+  },
+  {
+    "country": "Finland",
+    "code": "FI",
+    "lat": 64,
+    "lng": 26,
+    "count": 3
   },
   {
     "country": "India",
