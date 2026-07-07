@@ -2,7 +2,7 @@
 """Fetch per-country visitor counts from GoatCounter and write _data/visitors.json.
 Env: GOATCOUNTER_CODE (site code), GOATCOUNTER_TOKEN (API token).
 Run by .github/workflows/refresh-visitors.yml. No-ops safely if unconfigured."""
-import json, os, sys, urllib.request
+import json, os, sys, time, urllib.request, urllib.error
 
 CODE = os.environ.get("GOATCOUNTER_CODE", "").strip()
 TOKEN = os.environ.get("GOATCOUNTER_TOKEN", "").strip()
@@ -30,8 +30,30 @@ C = {
 
 url = "https://%s.goatcounter.com/api/v0/stats/locations" % CODE
 req = urllib.request.Request(url, headers={"Authorization": "Bearer " + TOKEN, "Content-Type": "application/json"})
-with urllib.request.urlopen(req, timeout=30) as r:
-    payload = json.load(r)
+
+# GoatCounter's stats endpoint 404s intermittently (period-dependent / transient),
+# so retry a few times and, on persistent failure, keep the existing data instead of
+# crashing the daily job. Never let a flaky upstream fail the workflow.
+payload = None
+last_err = None
+for attempt in range(1, 4):
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            payload = json.load(r)
+        break
+    except urllib.error.HTTPError as e:
+        last_err = "HTTP %s" % e.code
+        if e.code in (401, 403):
+            print("GoatCounter auth failed (%s) — check GOATCOUNTER_TOKEN. Keeping existing data." % e.code)
+            sys.exit(0)
+    except (urllib.error.URLError, TimeoutError) as e:
+        last_err = str(getattr(e, "reason", e))
+    if attempt < 3:
+        time.sleep(5 * attempt)
+
+if payload is None:
+    print("GoatCounter fetch failed after retries (%s) — keeping existing _data/visitors.json." % last_err)
+    sys.exit(0)
 
 rows = payload.get("stats") or payload.get("locations") or []
 out = []
