@@ -7,7 +7,7 @@
       <a {% if page.nav == 'publications' %}class="active" {% endif %}href="{{ '/publications.html' | relative_url }}">Publications</a>
       <a {% if page.nav == 'media' %}class="active" {% endif %}href="{{ '/media.html' | relative_url }}">Media</a>
       <a href="{{ '/#awards' | relative_url }}">Awards</a>
-      <a href="{{ '/docs/resume.pdf' | relative_url }}">CV</a>
+      <a href="{{ '/docs/resume.pdf' | relative_url }}?v={{ site.asset_ver }}">CV</a>
     </div>
     <div class="nav-right">
       <button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode" title="Toggle theme">🌙</button>
