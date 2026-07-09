@@ -1,0 +1,32 @@
+name: Refresh Scholar stats
+on:
+  schedule:
+    - cron: "23 6 * * 1"   # weekly, Mondays ~06:23 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Fetch Google Scholar stats
+        env:
+          SCHOLAR_ID: ${{ vars.SCHOLAR_ID || 'H8YEc-gAAAAJ' }}
+        run: python scripts/fetch_scholar.py
+      - name: Commit if changed
+        run: |
+          if ! git diff --quiet -- _data/scholar.json; then
+            git config user.name  "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add _data/scholar.json
+            git commit -m "Refresh Scholar stats [skip ci]"
+            git push
+          else
+            echo "No change."
+          fi

@@ -4,6 +4,7 @@ _site/
 vendor/
 .sass-cache/
 Gemfile.lock
+__pycache__/
 
 # local-only
 Gemfile.local

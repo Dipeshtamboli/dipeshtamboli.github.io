@@ -6,6 +6,18 @@ author: Dipesh Tamboli
 url: "https://dipeshtamboli.github.io"
 baseurl: ""
 
+# Social-share preview card (Open Graph / Twitter). Applied to every page via
+# front-matter defaults so jekyll-seo-tag emits og:image + twitter:image and
+# upgrades the Twitter card to summary_large_image.
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /images/og-card.png
+
+twitter:
+  card: summary_large_image
+
 # bump to force browsers to fetch fresh site.css / theme.js
 asset_ver: "15"
 
