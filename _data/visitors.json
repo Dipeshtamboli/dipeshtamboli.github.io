@@ -4,7 +4,7 @@
     "code": "US",
     "lat": 38,
     "lng": -97,
-    "count": 25
+    "count": 37
   },
   {
     "country": "Finland",
@@ -19,6 +19,13 @@
     "lat": 22,
     "lng": 79,
     "count": 3
+  },
+  {
+    "country": "France",
+    "code": "FR",
+    "lat": 46,
+    "lng": 2,
+    "count": 1
   },
   {
     "country": "South Korea",
