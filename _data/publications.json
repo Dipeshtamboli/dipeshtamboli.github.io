@@ -106,6 +106,10 @@
     ],
     "links": [
       {
+        "label": "ACL",
+        "url": "https://aclanthology.org/2026.findings-acl.50/"
+      },
+      {
         "label": "arXiv",
         "url": "https://arxiv.org/abs/2603.18411"
       }
@@ -117,6 +121,10 @@
         "Meta"
       ],
       "links": [
+        {
+          "label": "ACL",
+          "url": "https://aclanthology.org/2026.findings-acl.50/"
+        },
         {
           "label": "arXiv",
           "url": "https://arxiv.org/abs/2603.18411"
@@ -288,6 +296,10 @@
       "49 citations"
     ],
     "links": [
+      {
+        "label": "DOI",
+        "url": "https://doi.org/10.1007/978-3-030-58574-7_44"
+      },
       {
         "label": "PDF",
         "url": "https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123710732.pdf"
