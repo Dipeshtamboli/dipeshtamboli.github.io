@@ -374,6 +374,12 @@
     "chips": [
       "First author"
     ],
+    "links": [
+      {
+        "label": "OpenReview",
+        "url": "https://openreview.net/forum?id=AqiB_Tqqc8z"
+      }
+    ],
     "section": "other"
   },
   {
@@ -385,6 +391,12 @@
     "venue": "European Journal of Wood and Wood Products",
     "chips": [
       "11 citations"
+    ],
+    "links": [
+      {
+        "label": "DOI",
+        "url": "https://doi.org/10.1007/s00107-023-01969-w"
+      }
     ],
     "section": "other"
   },
