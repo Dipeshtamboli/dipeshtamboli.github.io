@@ -136,7 +136,7 @@
     "type": "workshop",
     "tag": "NeurIPS-W",
     "year": "2025",
-    "title": "Exploring System 1 and System 2 Communication for Latent Reasoning in LLMs",
+    "title": "Exploring System 1 and 2 Communication for Latent Reasoning in LLMs",
     "authors": "Julian Coda-Forno, Zhuokai Zhao, Qiang Zhang, <b>Dipesh Tamboli</b>, Weiwei Li, Xiangjun Fan, Lizhu Zhang, Eric Schulz, Hsiao-Ping Tseng",
     "venue": "NeurIPS 2025 Workshop",
     "chips": [
@@ -250,14 +250,6 @@
       }
     ],
     "section": "selected"
-  },
-  {
-    "type": "review",
-    "tag": "TMLR",
-    "year": "'26",
-    "title": "BRIDLE",
-    "venue": "Under review at Transactions on Machine Learning Research",
-    "section": "review"
   },
   {
     "type": "review",
