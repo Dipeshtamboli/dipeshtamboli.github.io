@@ -19,3 +19,4 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ '/site.css' | relative_url }}?v={{ site.asset_ver }}">
 {%- seo title=false -%}
+{%- if page.nav == 'home' %}{% include structured-data.html %}{% endif -%}

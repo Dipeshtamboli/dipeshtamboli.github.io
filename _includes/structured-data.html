@@ -1,0 +1,47 @@
+{%- comment -%}
+Rich Person schema for the homepage. Complements the WebSite JSON-LD that
+jekyll-seo-tag emits (whose Person is name-only). Helps Google associate the
+site with the person for rich results / Knowledge Panel eligibility.
+{%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "{{ '/#person' | absolute_url }}",
+  "name": "Dipesh Tamboli",
+  "givenName": "Dipesh",
+  "familyName": "Tamboli",
+  "url": "{{ '/' | absolute_url }}",
+  "image": "{{ '/docs/dp.jpg' | absolute_url }}",
+  "jobTitle": "Research Scientist",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Meta",
+    "url": "https://about.meta.com/"
+  },
+  "alumniOf": [
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "Purdue University",
+      "url": "https://www.purdue.edu/"
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "Indian Institute of Technology Bombay",
+      "url": "https://www.iitb.ac.in/"
+    }
+  ],
+  "knowsAbout": [
+    "AI alignment",
+    "Privacy-preserving machine learning",
+    "Trustworthy machine learning",
+    "Reinforcement learning for large language models",
+    "Generative AI"
+  ],
+  "sameAs": [
+    "{{ site.scholar_url }}",
+    "https://www.linkedin.com/in/dipesh-tamboli/",
+    "https://github.com/DipeshTamboli/"
+  ]
+}
+</script>
