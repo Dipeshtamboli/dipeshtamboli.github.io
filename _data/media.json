@@ -143,13 +143,6 @@
         "region": "Aggregator"
       },
       {
-        "href": "https://www.brightsurf.com/news/8X5DEOP1/privacy-by-design-purdue-tech-protects-against-identity-leaking-during-ai-photo-editing",
-        "fav": "brightsurf.com.png",
-        "name": "BrightSurf",
-        "desc": "Science-news aggregator.",
-        "region": "Science"
-      },
-      {
         "href": "https://www.ucvradio.pe/noticias-del-mundo/cuatro-investigadores-indios-en-ee-uu-desarrollan-una-tecnologia-unica-para-evitar-filtraciones-de-identidad-durante-la-edicion-de-fotografias-con-ia-todo-sobre-privateedit/175041/",
         "fav": "ucvradio.pe.png",
         "name": "UCV Radio",
@@ -169,13 +162,6 @@
         "fav": "article-factory.ai.png",
         "name": "Article-Factory.ai",
         "desc": "\"Purdue researchers develop privacy-preserving AI photo editing method.\"",
-        "region": "Aggregator"
-      },
-      {
-        "href": "https://bravennow.com/news/us/privateedit-a-privacy-preserving-pipeline-for-face-centric-generative-image-editing",
-        "fav": "bravennow.com.png",
-        "name": "BravenNow",
-        "desc": "\"PrivateEdit: A Privacy-Preserving Pipeline for Face-Centric Generative Image Editing.\"",
         "region": "Aggregator"
       },
       {

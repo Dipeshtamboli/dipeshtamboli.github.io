@@ -290,7 +290,7 @@
     "tag": "ECCV",
     "year": "2020",
     "title": "Multi-source open-set deep adversarial domain adaptation",
-    "authors": "Sayan Rakshit, <b>Dipesh Tamboli</b>, Pratik S. Meshram, Biplab Banerjee, Gemma Roig, Subhasis Chaudhuri",
+    "authors": "Sayan Rakshit, <b>Dipesh Tamboli</b>, Pragati Shuddhodhan Meshram, Biplab Banerjee, Gemma Roig, Subhasis Chaudhuri",
     "venue": "European Conference on Computer Vision (ECCV)",
     "chips": [
       "49 citations"
@@ -387,7 +387,7 @@
     "tag": "Preprint",
     "year": "2023",
     "title": "Kuiper: Moderated Asynchronous Federated Learning on Heterogeneous Mobile Devices with Non-IID Data",
-    "authors": "<b>Dipesh Tamboli</b>, Pranjal Jain, Aabhas Sharma, Biplab Banerjee, Saurabh Bagchi, Somali Chaterji",
+    "authors": "<b>Dipesh Tamboli</b>, Pranjal Jain, Atul Sharma, Biplab Banerjee, Saurabh Bagchi, Somali Chaterji",
     "venue": "Preprint",
     "chips": [
       "First author"
