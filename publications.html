@@ -18,25 +18,25 @@ description: "Publications by Dipesh Tamboli — alignment, privacy-preserving a
     </header>
 
     <section>
-      <p class="subhead">Selected &amp; Recent</p>
+      <h2 class="subhead">Selected &amp; Recent</h2>
       {%- assign items = site.data.publications | where: "section", "selected" -%}
       {%- for pub in items %}
 {% include pub-card.html pub=pub %}
       {%- endfor %}
 
-      <p class="subhead">Under Review</p>
+      <h2 class="subhead">Under Review</h2>
       {%- assign items = site.data.publications | where: "section", "review" -%}
       {%- for pub in items %}
 {% include pub-card.html pub=pub %}
       {%- endfor %}
 
-      <p class="subhead">Earlier Work</p>
+      <h2 class="subhead">Earlier Work</h2>
       {%- assign items = site.data.publications | where: "section", "earlier" -%}
       {%- for pub in items %}
 {% include pub-card.html pub=pub %}
       {%- endfor %}
 
-      <p class="subhead">Other Work</p>
+      <h2 class="subhead">Other Work</h2>
       {%- assign items = site.data.publications | where: "section", "other" -%}
       {%- for pub in items %}
 {% include pub-card.html pub=pub %}

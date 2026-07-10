@@ -20,7 +20,7 @@ description: "Media coverage of Dipesh Tamboli's research, including PRIVATEEDIT
 
     <section>
       {%- for sec in site.data.media %}
-      <p class="subhead">{{ sec.title }}</p>
+      <h2 class="subhead">{{ sec.title }}</h2>
       <div class="media-grid">
         {%- for card in sec.cards %}
 {% include media-card.html card=card %}

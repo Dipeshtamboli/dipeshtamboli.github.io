@@ -7,6 +7,7 @@
   --muted:#6b6b76;
   --accent:#2d6cdf;
   --accent-soft:#eaf1fe;
+  --chip-link:#2864d2; /* darker than --accent to pass WCAG AA on --accent-soft */
   --tag:#eef0f4;
   --tag-text:#3a3a44;
   --shadow:0 1px 2px rgba(20,20,30,.04),0 8px 24px rgba(20,20,30,.06);
@@ -22,6 +23,7 @@
   --muted:#9a9aa8;
   --accent:#6ea0ff;
   --accent-soft:#1a2337;
+  --chip-link:#6ea0ff; /* passes AA on dark --accent-soft (6:1) */
   --tag:#242833;
   --tag-text:#c3c7d4;
   --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.35);
@@ -39,6 +41,24 @@ body{
 }
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
+
+/* keyboard focus visibility (a11y) — shown only for keyboard nav, not mouse clicks */
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
+select:focus-visible,[tabindex]:focus-visible,.media-card:focus-visible,.chip.link:focus-visible{
+  outline:2px solid var(--accent);
+  outline-offset:2px;
+  border-radius:6px;
+}
+
+/* respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+  }
+}
 
 /* nav */
 nav{
@@ -94,6 +114,8 @@ section{padding-top:52px;scroll-margin-top:72px}
   font-weight:600;color:var(--muted);margin-bottom:14px;
 }
 h2{font-size:1.45rem;font-weight:700;letter-spacing:-.02em;margin:0 0 22px}
+/* page-title h1 styled like h2 (used on utility pages so each page has one h1) */
+.sect-title{font-size:1.45rem;font-weight:700;letter-spacing:-.02em;margin:0 0 22px}
 
 /* page header (secondary pages) */
 .page-head{padding-top:56px}
@@ -191,7 +213,7 @@ h2{font-size:1.45rem;font-weight:700;letter-spacing:-.02em;margin:0 0 22px}
   font-size:.76rem;font-weight:600;padding:3px 9px;border-radius:999px;
   background:var(--tag);color:var(--tag-text);
 }
-.chip.link{background:var(--accent-soft);color:var(--accent)}
+.chip.link{background:var(--accent-soft);color:var(--chip-link)}
 .subhead{font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:26px 0 14px}
 @media(max-width:520px){
   .pub{grid-template-columns:1fr;gap:12px}
@@ -306,7 +328,7 @@ a.media-card:hover{border-color:var(--accent);transform:translateY(-2px);text-de
   padding:10px 14px;border:1px solid var(--border);border-radius:10px;
   background:var(--surface-2);color:var(--text);font-size:.95rem;min-width:220px;
 }
-.lockform input:focus{outline:none;border-color:var(--accent)}
+.lockform input:focus{border-color:var(--accent)}
 .lockform button{
   padding:10px 18px;border:1px solid var(--accent);border-radius:10px;cursor:pointer;
   background:var(--accent);color:#fff;font-size:.95rem;font-weight:600;transition:.15s;
@@ -338,7 +360,7 @@ footer{
   padding:14px 16px;border:1px solid var(--border);border-radius:12px;
   background:var(--surface-2);color:var(--text);tab-size:4;
 }
-.py-code:focus{outline:none;border-color:var(--accent)}
+.py-code:focus{border-color:var(--accent)}
 .py-bar{display:flex;align-items:center;gap:12px;margin:10px 0}
 .py-run{
   padding:9px 18px;border:1px solid var(--accent);border-radius:10px;cursor:pointer;
