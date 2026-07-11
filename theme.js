@@ -4,10 +4,47 @@
   var prefersDark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;
   var theme=saved||(prefersDark?'dark':'light');
   apply(theme);
+  function setTheme(t){theme=t;apply(t);localStorage.setItem('theme',t);}
+
+  // Switching to dark is instant. Defecting to light? Not so fast — a playful
+  // escalating "are you sure?" nag (dark-mode superiority, with love).
+  var NAG=[
+    {t:"Switch to light mode? ☀️", yes:"Yes, switch", no:"Never mind"},
+    {t:"You sure? That's a lot of light for those eyes… 😎", yes:"I'm sure", no:"Keep it dark"},
+    {t:"Last chance — this cannot be unseen. Really go light? 🙈", yes:"Blind me ☀️", no:"Fine, stay dark"}
+  ];
+  function askLight(step){
+    var cfg=NAG[step];
+    var wrap=document.createElement('div');
+    wrap.className='theme-modal-backdrop';
+    wrap.innerHTML='<div class="theme-modal" role="alertdialog" aria-modal="true" aria-labelledby="tmMsg">'
+      +'<p class="tm-step">Confirmation '+(step+1)+' of '+NAG.length+'</p>'
+      +'<h3 id="tmMsg"></h3>'
+      +'<div class="tm-row">'
+      +'<button class="tm-no" type="button"></button>'
+      +'<button class="tm-yes" type="button"></button>'
+      +'</div></div>';
+    document.body.appendChild(wrap);
+    wrap.querySelector('#tmMsg').textContent=cfg.t;
+    var yes=wrap.querySelector('.tm-yes'), no=wrap.querySelector('.tm-no');
+    yes.textContent=cfg.yes; no.textContent=cfg.no;
+    function cleanup(){document.removeEventListener('keydown',onKey);wrap.remove();}
+    function close(){cleanup();if(btn)btn.focus();}
+    function onKey(e){if(e.key==='Escape')close();}
+    document.addEventListener('keydown',onKey);
+    wrap.addEventListener('click',function(e){if(e.target===wrap)close();});
+    no.addEventListener('click',close);
+    yes.addEventListener('click',function(){
+      if(step+1<NAG.length){cleanup();askLight(step+1);}
+      else{close();setTheme('light');}
+    });
+    no.focus(); // the dark side nudges you: "keep dark" is the default
+  }
+
   if(btn){
     btn.addEventListener('click',function(){
-      theme=root.getAttribute('data-theme')==='dark'?'light':'dark';
-      apply(theme);localStorage.setItem('theme',theme);
+      if(root.getAttribute('data-theme')==='dark') askLight(0); // going to light → nag
+      else setTheme('dark');                                    // going to dark → instant
     });
   }
   function apply(t){root.setAttribute('data-theme',t);if(btn)btn.textContent=t==='dark'?'☀️':'🌙';}
