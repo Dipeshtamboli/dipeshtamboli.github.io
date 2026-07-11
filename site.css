@@ -50,6 +50,16 @@ select:focus-visible,[tabindex]:focus-visible,.media-card:focus-visible,.chip.li
   border-radius:6px;
 }
 
+/* skip-to-content link — visible only when focused via keyboard */
+.skip-link{
+  position:absolute;left:8px;top:-52px;z-index:100;
+  background:var(--accent);color:#fff;
+  padding:9px 15px;border-radius:9px;font-weight:600;font-size:.9rem;
+  transition:top .15s ease;
+}
+.skip-link:focus{top:8px;text-decoration:none;outline:2px solid var(--text);outline-offset:2px}
+#content:focus{outline:none}
+
 /* respect users who prefer reduced motion */
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto}
