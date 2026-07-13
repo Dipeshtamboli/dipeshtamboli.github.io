@@ -14,3 +14,24 @@ Gemfile.local.lock
 python-content.html
 
 visitors-content.html
+
+# Byte-compiled / cache
+*.py[cod]
+*$py.class
+
+# Jupyter
+.ipynb_checkpoints/
+
+# TensorBoard / training logs
+runs/
+*.tfevents.*
+events.out.tfevents.*
+
+# OS / editor
+.DS_Store
+*.swp
+
+# Environments
+.venv/
+venv/
+env/
