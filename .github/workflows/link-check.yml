@@ -1,0 +1,37 @@
+name: Link check
+on:
+  schedule:
+    - cron: "41 6 * * 1"   # weekly, Mondays ~06:41 UTC
+  push:
+    branches: [main]
+    paths:
+      - "**/*.html"
+      - "_data/**"
+      - "_includes/**"
+      - "_layouts/**"
+      - "_config.yml"
+      - "scripts/check_links.py"
+      - ".github/workflows/link-check.yml"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  linkcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+      - name: Build site
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Check links
+        run: python scripts/check_links.py
