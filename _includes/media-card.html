@@ -1,7 +1,11 @@
 {%- assign c = include.card -%}
         <a class="media-card" href="{{ c.href }}">
           {%- if c.thumb %}
-          <img class="thumb" src="{{ '/images/media/' | append: c.thumb | relative_url }}" alt="" loading="lazy">
+          {%- assign thumb_webp = c.thumb | replace: '.jpg', '.webp' -%}
+          <picture>
+            <source type="image/webp" srcset="{{ '/images/media/' | append: thumb_webp | relative_url }}">
+            <img class="thumb" src="{{ '/images/media/' | append: c.thumb | relative_url }}" alt="" loading="lazy">
+          </picture>
           {%- else %}
           <div class="thumb-ph"><img src="{{ '/images/favicons/' | append: c.fav | relative_url }}" alt="" loading="lazy"></div>
           {%- endif %}

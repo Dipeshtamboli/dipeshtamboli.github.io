@@ -19,7 +19,7 @@ twitter:
   card: summary_large_image
 
 # bump to force browsers to fetch fresh site.css / theme.js
-asset_ver: "18"
+asset_ver: "19"
 
 scholar_url: "https://scholar.google.com/citations?user=H8YEc-gAAAAJ&hl=en"
 

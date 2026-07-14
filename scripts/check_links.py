@@ -39,7 +39,11 @@ def collect():
     for f in glob.glob(os.path.join(SITE, "**", "*.html"), recursive=True):
         with open(f, encoding="utf-8") as fh:
             html = fh.read()
-        for url in re.findall(r'(?:href|src)="([^"]+)"', html):
+        urls = re.findall(r'(?:href|src)="([^"]+)"', html)
+        # <source srcset="a.webp 1x, b.webp 2x"> — take each candidate URL
+        for ss in re.findall(r'srcset="([^"]+)"', html):
+            urls += [part.strip().split()[0] for part in ss.split(",") if part.strip()]
+        for url in urls:
             if url.startswith(SKIP_PREFIXES):
                 continue
             if url.startswith("//"):
