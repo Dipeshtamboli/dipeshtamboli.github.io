@@ -175,7 +175,24 @@
         "url": "https://github.com/Dipeshtamboli/PosNegDM-Reinforced-Sequential-Decision-Making-for-Sepsis-Treatment"
       }
     ],
-    "section": "selected"
+    "section": "selected",
+    "featured": true,
+    "home": {
+      "chips": [
+        "First author",
+        "15 citations"
+      ],
+      "links": [
+        {
+          "label": "IEEE",
+          "url": "https://ieeexplore.ieee.org/document/10472521/"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2403.07309"
+        }
+      ]
+    }
   },
   {
     "type": "journal",
