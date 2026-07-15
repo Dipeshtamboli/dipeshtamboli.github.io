@@ -4,13 +4,13 @@
           {%- assign thumb_webp = c.thumb | replace: '.jpg', '.webp' -%}
           <picture>
             <source type="image/webp" srcset="{{ '/images/media/' | append: thumb_webp | relative_url }}">
-            <img class="thumb" src="{{ '/images/media/' | append: c.thumb | relative_url }}" alt="" loading="lazy">
+            <img class="thumb" src="{{ '/images/media/' | append: c.thumb | relative_url }}" alt="" loading="lazy" width="640" height="360">
           </picture>
           {%- else %}
-          <div class="thumb-ph"><img src="{{ '/images/favicons/' | append: c.fav | relative_url }}" alt="" loading="lazy"></div>
+          <div class="thumb-ph"><img src="{{ '/images/favicons/' | append: c.fav | relative_url }}" alt="" loading="lazy" width="54" height="54"></div>
           {%- endif %}
           <div class="head">
-            <img class="fav" src="{{ '/images/favicons/' | append: c.fav | relative_url }}" alt="" loading="lazy">
+            <img class="fav" src="{{ '/images/favicons/' | append: c.fav | relative_url }}" alt="" loading="lazy" width="30" height="30">
             <span class="name">{{ c.name }}</span>
           </div>
           <div class="desc">{{ c.desc }}</div>

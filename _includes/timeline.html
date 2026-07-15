@@ -9,14 +9,14 @@
         <div class="gt-node gi {{ n.era }}" style="left:{{ n.left }}%">
           <div class="g-nm">{{ n.name }}</div>
           <div class="g-yr">{{ n.year }}</div>
-          <div class="g-chip"><img src="{{ '/images/logos/' | append: n.logo | relative_url }}" alt="{{ n.alt }}"></div>
+          <div class="g-chip"><img src="{{ '/images/logos/' | append: n.logo | relative_url }}" alt="{{ n.alt }}" width="50" height="50"></div>
           <div class="stem"></div>
         </div>
         {%- endif %}{% endfor %}
 
         {%- for n in site.data.timeline.nodes %}{% if n.lane == 'main' %}
         <div class="gt-node main" style="left:{{ n.left }}%">
-          <div class="g-chip"><img src="{{ '/images/logos/' | append: n.logo | relative_url }}" alt="{{ n.alt }}"></div>
+          <div class="g-chip"><img src="{{ '/images/logos/' | append: n.logo | relative_url }}" alt="{{ n.alt }}" width="50" height="50"></div>
           <div class="g-nm">{{ n.name }}</div>
           <div class="g-yr">{{ n.year }}</div>
         </div>
