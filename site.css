@@ -140,9 +140,8 @@ h2{font-size:1.45rem;font-weight:700;letter-spacing:-.02em;margin:0 0 22px}
   transition:transform .3s cubic-bezier(.22,1,.36,1);will-change:transform;
 }
 .hero-photo{flex:0 0 168px}
-/* let <picture> vanish from layout so the <img> stays the direct flex child
-   (keeps .thumb's width:100% + aspect-ratio:16/9 intact with the WebP wrapper) */
-.hero-photo picture,.media-card picture{display:contents}
+/* hero photo: <picture> vanishes so the fixed-size <img> lays out normally */
+.hero-photo picture{display:contents}
 .hero-photo img{
   width:168px;height:168px;object-fit:cover;border-radius:20px;
   box-shadow:var(--shadow);border:1px solid var(--border);
@@ -258,9 +257,13 @@ h2{font-size:1.45rem;font-weight:700;letter-spacing:-.02em;margin:0 0 22px}
   background:var(--surface-2);box-shadow:var(--shadow);transition:.15s;
 }
 a.media-card:hover{border-color:var(--accent);transform:translateY(-2px);text-decoration:none}
+/* the <picture> IS the fixed 16:9 box; the <img> just fills it (robust in flex) */
+.media-card picture{
+  display:block;width:100%;aspect-ratio:16/9;overflow:hidden;
+  border-radius:10px;background:var(--surface);border:1px solid var(--border);
+}
 .media-card .thumb{
-  width:100%;aspect-ratio:16/9;object-fit:cover;
-  border-radius:10px;background:var(--surface);border:1px solid var(--border);display:block;
+  width:100%;height:100%;object-fit:cover;display:block;border-radius:10px;
 }
 .media-card .thumb-ph{
   width:100%;aspect-ratio:16/9;border-radius:10px;border:1px solid var(--border);
