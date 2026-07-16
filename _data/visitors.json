@@ -4,20 +4,13 @@
     "code": "US",
     "lat": 38,
     "lng": -97,
-    "count": 54
+    "count": 57
   },
   {
     "country": "Switzerland",
     "code": "CH",
     "lat": 47,
     "lng": 8,
-    "count": 3
-  },
-  {
-    "country": "Finland",
-    "code": "FI",
-    "lat": 64,
-    "lng": 26,
     "count": 3
   },
   {
