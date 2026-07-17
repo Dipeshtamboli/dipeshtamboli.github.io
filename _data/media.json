@@ -117,6 +117,32 @@
     ]
   },
   {
+    "title": "On Instagram",
+    "cards": [
+      {
+        "href": "https://www.instagram.com/p/DYPOOVXICC2/",
+        "fav": "instagram.png",
+        "name": "Purdue Innovates",
+        "desc": "\"Consumers, businesses and institutions may soon have private, secure and trustworthy generative AI tools…\" — the patent-pending PrivateEdit system by Dipesh Tamboli.",
+        "region": "Instagram"
+      },
+      {
+        "href": "https://www.instagram.com/purdue.ie/",
+        "fav": "instagram.png",
+        "name": "Purdue Industrial Engineering",
+        "desc": "Edwardson School of Industrial Engineering featured the patent-pending PrivateEdit work (Dipesh Tamboli, pictured).",
+        "region": "Instagram"
+      },
+      {
+        "href": "https://www.instagram.com/purdue.ece/",
+        "fav": "instagram.png",
+        "name": "Purdue ECE",
+        "desc": "Elmore Family School of Electrical &amp; Computer Engineering spotlighted the patent-pending PrivateEdit research.",
+        "region": "Instagram"
+      }
+    ]
+  },
+  {
     "title": "Diaspora, regional &amp; aggregators",
     "cards": [
       {
