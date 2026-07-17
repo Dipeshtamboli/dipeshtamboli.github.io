@@ -210,5 +210,17 @@
         "region": "Apr 2024"
       }
     ]
+  },
+  {
+    "title": "Other research: ENBED (DNA foundation model)",
+    "cards": [
+      {
+        "href": "https://www.rcac.purdue.edu/news/7744",
+        "fav": "purdue.edu.png",
+        "name": "Purdue RCAC",
+        "desc": "\"Purdue researcher leverages AI in the fight against cancer\" — the Rosen Center for Advanced Computing feature spotlights ENBED, our DNA foundation model (Bioinformatics Advances, 2024).",
+        "region": "May 2026"
+      }
+    ]
   }
 ]
