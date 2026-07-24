@@ -92,7 +92,7 @@ sitemap: false
         var data = (res.data || []).filter(function (d) { return d && d.lat != null && d.lng != null; });
         var total = data.reduce(function (a, d) { return a + (d.count || 0); }, 0);
         var vt = document.getElementById('vtotal');
-        if (vt) vt.textContent = total ? ('Total: ' + total + ' visits · ' + data.length + ' ' + res.mode) : 'No data yet.';
+        if (vt) vt.textContent = total ? ('Total (all-time): ' + total + ' visits · ' + data.length + ' ' + res.mode) : 'No data yet.';
         var sorted = data.slice().sort(function (a, b) { return b.count - a.count; });
         var vl = document.getElementById('vlist');
         if (vl) vl.textContent = sorted.slice(0, 15).map(function (d) {
