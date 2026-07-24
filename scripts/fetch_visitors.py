@@ -2,7 +2,7 @@
 """Fetch per-country visitor counts from GoatCounter and write _data/visitors.json.
 Env: GOATCOUNTER_CODE (site code), GOATCOUNTER_TOKEN (API token).
 Run by .github/workflows/refresh-visitors.yml. No-ops safely if unconfigured."""
-import json, os, sys, time, urllib.request, urllib.error
+import datetime, json, os, sys, time, urllib.parse, urllib.request, urllib.error
 
 CODE = os.environ.get("GOATCOUNTER_CODE", "").strip()
 TOKEN = os.environ.get("GOATCOUNTER_TOKEN", "").strip()
@@ -28,7 +28,13 @@ C = {
  "AR":("Argentina",-34,-64),"CO":("Colombia",4,-73),"LK":("Sri Lanka",7.9,80.8),"NP":("Nepal",28,84),
 }
 
-url = "https://%s.goatcounter.com/api/v0/stats/locations" % CODE
+# Query the FULL history (start well before the site launched) so counts are
+# cumulative all-time. Without start/end, GoatCounter returns only its default
+# recent window, which makes the total shrink and countries rotate as old visits
+# age out. end is set slightly ahead to be safe about timezones.
+_end = (datetime.datetime.utcnow() + datetime.timedelta(days=1)).strftime("%Y-%m-%d")
+_qs = urllib.parse.urlencode({"start": "2020-01-01", "end": _end})
+url = "https://%s.goatcounter.com/api/v0/stats/locations?%s" % (CODE, _qs)
 req = urllib.request.Request(url, headers={"Authorization": "Bearer " + TOKEN, "Content-Type": "application/json"})
 
 # GoatCounter's stats endpoint 404s intermittently (period-dependent / transient),
