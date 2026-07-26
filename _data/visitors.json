@@ -4,7 +4,7 @@
     "code": "US",
     "lat": 38,
     "lng": -97,
-    "count": 115
+    "count": 118
   },
   {
     "country": "India",
@@ -46,6 +46,13 @@
     "code": "GB",
     "lat": 54,
     "lng": -2,
+    "count": 1
+  },
+  {
+    "country": "Hong Kong",
+    "code": "HK",
+    "lat": 22.3,
+    "lng": 114.2,
     "count": 1
   },
   {
