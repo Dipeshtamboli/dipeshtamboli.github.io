@@ -4,7 +4,7 @@
     "code": "US",
     "lat": 38,
     "lng": -97,
-    "count": 130
+    "count": 132
   },
   {
     "country": "India",
@@ -35,17 +35,17 @@
     "count": 3
   },
   {
-    "country": "Brazil",
-    "code": "BR",
-    "lat": -10,
-    "lng": -55,
-    "count": 1
-  },
-  {
     "country": "China",
     "code": "CN",
     "lat": 35,
     "lng": 105,
+    "count": 2
+  },
+  {
+    "country": "Brazil",
+    "code": "BR",
+    "lat": -10,
+    "lng": -55,
     "count": 1
   },
   {
