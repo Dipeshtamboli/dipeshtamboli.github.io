@@ -4,14 +4,14 @@
     "code": "US",
     "lat": 38,
     "lng": -97,
-    "count": 137
+    "count": 140
   },
   {
     "country": "India",
     "code": "IN",
     "lat": 22,
     "lng": 79,
-    "count": 6
+    "count": 8
   },
   {
     "country": "Singapore",
@@ -42,6 +42,13 @@
     "count": 2
   },
   {
+    "country": "France",
+    "code": "FR",
+    "lat": 46,
+    "lng": 2,
+    "count": 2
+  },
+  {
     "country": "Brazil",
     "code": "BR",
     "lat": -10,
@@ -49,10 +56,10 @@
     "count": 1
   },
   {
-    "country": "France",
-    "code": "FR",
-    "lat": 46,
-    "lng": 2,
+    "country": "Canada",
+    "code": "CA",
+    "lat": 56,
+    "lng": -106,
     "count": 1
   },
   {
