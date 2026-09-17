@@ -27,9 +27,10 @@
       },
       {
         "href": "https://www.msn.com/en-in/technology/cybersecurity/4-indian-researchers-in-us-develop-unique-tech-to-prevent-id-leaks-during-ai-photo-editing-all-about-privateedit/ar-AA20k64B",
+        "thumb": "hindustantimes.jpg",
         "fav": "msn.com.png",
         "name": "MSN India",
-        "desc": "Syndicated feature on the MSN India news portal.",
+        "desc": "Hindustan Times feature syndicated on the MSN India news portal.",
         "region": "Apr 2026"
       },
       {
@@ -100,11 +101,11 @@
         "region": "Student press"
       },
       {
-        "href": "https://stories.prf.org/articles/",
+        "href": "https://licensing.prf.org/product/privacy-preserving-method-and-system-for-generative-ai-image-processing",
         "fav": "prf.org.png",
-        "name": "Purdue Research Foundation",
-        "desc": "Stories — tagged under \"Commercialize.\"",
-        "region": "Research"
+        "name": "Purdue Innovates — Technology Licensing",
+        "desc": "Official PrivateEdit technology listing (Technology No. 2025-AGGA-71122).",
+        "region": "Patent"
       },
       {
         "href": "https://www.eurekalert.org/multimedia/1119691",
@@ -123,21 +124,7 @@
         "href": "https://www.instagram.com/p/DYPOOVXICC2/",
         "fav": "instagram.png",
         "name": "Purdue Innovates",
-        "desc": "\"Consumers, businesses and institutions may soon have private, secure and trustworthy generative AI tools…\" — the patent-pending PrivateEdit system by Dipesh Tamboli.",
-        "region": "Instagram"
-      },
-      {
-        "href": "https://www.instagram.com/purdue.ie/",
-        "fav": "instagram.png",
-        "name": "Purdue Industrial Engineering",
-        "desc": "Edwardson School of Industrial Engineering featured the patent-pending PrivateEdit work (Dipesh Tamboli, pictured).",
-        "region": "Instagram"
-      },
-      {
-        "href": "https://www.instagram.com/purdue.ece/",
-        "fav": "instagram.png",
-        "name": "Purdue ECE",
-        "desc": "Elmore Family School of Electrical &amp; Computer Engineering spotlighted the patent-pending PrivateEdit research.",
+        "desc": "\"Consumers, businesses and institutions may soon have private, secure and trustworthy generative AI tools…\" — the PrivateEdit system by Dipesh Tamboli.",
         "region": "Instagram"
       }
     ]
@@ -162,33 +149,12 @@
         "region": "India / US"
       },
       {
-        "href": "https://newstral.com/en/article/en/1276860773/indian-american-researchers-tool-protects-against-identity-leaking-during-ai-photo",
-        "fav": "newstral.com.png",
-        "name": "Newstral",
-        "desc": "News aggregator syndication.",
-        "region": "Aggregator"
-      },
-      {
-        "href": "https://www.ucvradio.pe/noticias-del-mundo/cuatro-investigadores-indios-en-ee-uu-desarrollan-una-tecnologia-unica-para-evitar-filtraciones-de-identidad-durante-la-edicion-de-fotografias-con-ia-todo-sobre-privateedit/175041/",
-        "fav": "ucvradio.pe.png",
-        "name": "UCV Radio",
-        "desc": "Spanish-language coverage.",
-        "region": "Peru / ES"
-      },
-      {
         "href": "https://www.rswebsols.com/news/four-indian-researchers-in-the-u-s-create-innovative-technology-to-safeguard-ids-during-ai-photo-editing-introducing-privateedit/",
         "thumb": "rswebsols.jpg",
         "fav": "rswebsols.com.png",
         "name": "RS Web Solutions",
         "desc": "In-depth feature on the \"Trust Slider\" and the project's Ghibli-trend origin story.",
         "region": "Tech"
-      },
-      {
-        "href": "https://article-factory.ai/news/purdue-researchers-develop-privacy-preserving-ai-photo-editing-method",
-        "fav": "article-factory.ai.png",
-        "name": "Article-Factory.ai",
-        "desc": "\"Purdue researchers develop privacy-preserving AI photo editing method.\"",
-        "region": "Aggregator"
       },
       {
         "href": "https://desitalkchicago.com/purdue-university-indianas-indian-american-researchers-advance-science-on-multiple-fronts/",
@@ -203,10 +169,12 @@
     "title": "Earlier feature",
     "cards": [
       {
-        "href": "https://www.purdue.edu/academics/ogsps/professional-development/innovated-articles/index.html",
+        "href": "https://www.purdue.edu/academics/ogsps/professional-development/2024/04/08/innovating-sustainability-transforming-wood-colors-for-a-greener-future/",
+        "thumb": "innovated.jpg",
+        "thumb_modern": "innovated.avif",
         "fav": "purdue.edu.png",
         "name": "Purdue InnovatED Magazine",
-        "desc": "Featured among Purdue's showcased graduate researchers (2024 edition).",
+        "desc": "“Innovating Sustainability: Transforming Wood Colors for a Greener Future.”",
         "region": "Apr 2024"
       }
     ]
@@ -216,9 +184,10 @@
     "cards": [
       {
         "href": "https://www.rcac.purdue.edu/news/7744",
+        "thumb": "rcac.jpg",
         "fav": "purdue.edu.png",
         "name": "Purdue RCAC",
-        "desc": "\"Purdue researcher leverages AI in the fight against cancer\" — the Rosen Center for Advanced Computing feature spotlights ENBED, our DNA foundation model (Bioinformatics Advances, 2024).",
+        "desc": "Purdue RCAC's cancer-AI roundup mentions ENBED, a DNA foundation model coauthored by Dipesh.",
         "region": "May 2026"
       }
     ]
