@@ -8,7 +8,7 @@
     "venue": "IEEE Transactions on Artificial Intelligence (TAI)",
     "chips": [
       "First author",
-      "Patent-pending"
+      "Provisional patent filed"
     ],
     "links": [
       {
@@ -24,7 +24,7 @@
         "url": "https://arxiv.org/abs/2603.03412"
       },
       {
-        "label": "Code",
+        "label": "Repository",
         "url": "https://github.com/Dipeshtamboli/PrivateEdit-Privacy-Preserving-GenAI"
       }
     ],
@@ -33,7 +33,7 @@
     "home": {
       "chips": [
         "First author",
-        "Patent-pending"
+        "Provisional patent filed"
       ],
       "links": [
         {
@@ -72,7 +72,7 @@
         "url": "https://openreview.net/forum?id=8HRID5VLQw"
       },
       {
-        "label": "Code",
+        "label": "Repository",
         "url": "https://github.com/Dipeshtamboli/BalancedDPO"
       }
     ],
@@ -136,16 +136,20 @@
     "type": "workshop",
     "tag": "NeurIPS-W",
     "year": "2025",
-    "title": "Exploring System 1 and 2 Communication for Latent Reasoning in LLMs",
+    "title": "Exploring System 1 and 2 communication for latent reasoning in LLMs",
     "authors": "Julian Coda-Forno, Zhuokai Zhao, Qiang Zhang, <b>Dipesh Tamboli</b>, Weiwei Li, Xiangjun Fan, Lizhu Zhang, Eric Schulz, Hsiao-Ping Tseng",
-    "venue": "NeurIPS 2025 Workshop",
+    "venue": "Workshop on Foundations of Reasoning in Language Models (FoRLM), NeurIPS 2025",
     "chips": [
-      "2 citations"
+      "3 citations"
     ],
     "links": [
       {
         "label": "arXiv",
         "url": "https://arxiv.org/abs/2510.00494"
+      },
+      {
+        "label": "OpenReview",
+        "url": "https://openreview.net/forum?id=xhXOFRp10k"
       }
     ],
     "section": "selected"
@@ -159,7 +163,7 @@
     "venue": "IEEE Journal of Biomedical and Health Informatics (JBHI)",
     "chips": [
       "First author",
-      "15 citations"
+      "16 citations"
     ],
     "links": [
       {
@@ -180,7 +184,7 @@
     "home": {
       "chips": [
         "First author",
-        "15 citations"
+        "16 citations"
       ],
       "links": [
         {
@@ -198,16 +202,16 @@
     "type": "journal",
     "tag": "Bioinf. Adv.",
     "year": "2024",
-    "title": "Understanding the natural language of DNA using encoder–decoder foundation models with byte-level precision (ENBED)",
+    "title": "Understanding the natural language of DNA using encoder–decoder foundation models with byte-level precision",
     "authors": "Aditya Malusare, Harish Kothandaraman, <b>Dipesh Tamboli</b>, Nadia A. Lanman, Vaneet Aggarwal",
     "venue": "Bioinformatics Advances (Oxford University Press)",
     "chips": [
-      "12 citations"
+      "15 citations"
     ],
     "links": [
       {
         "label": "DOI",
-        "url": "https://academic.oup.com/bioinformaticsadvances/article/4/1/vbae117/7731875"
+        "url": "https://doi.org/10.1093/bioadv/vbae117"
       },
       {
         "label": "arXiv",
@@ -224,7 +228,7 @@
     "authors": "Jiayu Chen, <b>Dipesh Tamboli</b>, Tian Lan, Vaneet Aggarwal",
     "venue": "International Conference on Machine Learning (ICML)",
     "chips": [
-      "28 citations"
+      "32 citations"
     ],
     "links": [
       {
@@ -236,7 +240,7 @@
     "featured": true,
     "home": {
       "chips": [
-        "28 citations"
+        "32 citations"
       ],
       "links": [
         {
@@ -251,7 +255,7 @@
     "tag": "ICCV",
     "year": "2023",
     "title": "Domain Adaptive Few-Shot Open-Set Learning",
-    "authors": "Debabrata Pal, Deeptej More, Sai Bhargav Rongali, <b>Dipesh Tamboli</b>, Vaneet Aggarwal, Biplab Banerjee",
+    "authors": "Debabrata Pal, Deeptej More, Sai Bhargav, <b>Dipesh Tamboli</b>, Vaneet Aggarwal, Biplab Banerjee",
     "venue": "IEEE/CVF International Conference on Computer Vision (ICCV)",
     "chips": [
       "19 citations"
@@ -271,7 +275,7 @@
   {
     "type": "review",
     "tag": "IEEE JBHI",
-    "year": "'26",
+    "year": "2026",
     "title": "Care-X",
     "venue": "Under review at IEEE Journal of Biomedical and Health Informatics",
     "section": "review"
@@ -289,7 +293,7 @@
     "links": [
       {
         "label": "DOI",
-        "url": "https://iopscience.iop.org/article/10.1088/1361-6463/abb33c/meta"
+        "url": "https://doi.org/10.1088/1361-6463/abb33c"
       }
     ],
     "section": "earlier"
@@ -325,7 +329,7 @@
     "venue": "IEEE WIE Conference on Electrical and Computer Engineering (WIECON-ECE)",
     "chips": [
       "Best Paper",
-      "47 citations"
+      "46 citations"
     ],
     "links": [
       {
@@ -340,7 +344,7 @@
     "tag": "ICLR-W",
     "year": "2020",
     "title": "Image-based phenotyping of diverse rice (Oryza sativa L.) genotypes",
-    "authors": "Mukesh Kumar Vishal, <b>Dipesh Tamboli</b>, Abhijeet Patil, Rohit Saluja, Biplab Banerjee, Amit Sethi, et al.",
+    "authors": "Mukesh Kumar Vishal, <b>Dipesh Tamboli</b>, Abhijeet Patil, Rohit Saluja, Biplab Banerjee, Amit Sethi, Dhandapani Raju, Sudhir Kumar, R. N. Sahoo, Viswanathan Chinnusamy, J. Adinarayana",
     "venue": "ICLR Workshop on Computer Vision for Agriculture (CV4A)",
     "chips": [
       "12 citations"
@@ -348,7 +352,7 @@
     "links": [
       {
         "label": "arXiv",
-        "url": "https://arxiv.org/pdf/2004.02498.pdf"
+        "url": "https://arxiv.org/abs/2004.02498"
       }
     ],
     "section": "earlier"
@@ -392,6 +396,54 @@
     "section": "earlier"
   },
   {
+    "type": "journal",
+    "tag": "J. Build. Eng.",
+    "year": "2026",
+    "title": "Surface thermal treatment (STT): benchmarking physical, mechanical and durability properties of yellow poplar - a comparative study of surface thermal treatment (STT) and ThermoWood treatment (TW)",
+    "authors": "Jue Mo, Liang Liang, Dylan Willard, <b>Dipesh Tamboli</b>, Armando G. McDonald, Eva Haviarova",
+    "venue": "Journal of Building Engineering, Volume 130, 117043",
+    "links": [
+      {
+        "label": "DOI",
+        "url": "https://doi.org/10.1016/j.jobe.2026.117043"
+      }
+    ],
+    "section": "other"
+  },
+  {
+    "type": "preprint",
+    "tag": "arXiv",
+    "year": "2025",
+    "title": "BRIDLE: Generalized Self-supervised Learning with Quantization",
+    "authors": "Hoang M. Nguyen, Satya N. Shukla, Qiang Zhang, Hanchao Yu, Sreya D. Roy, <b>Dipesh Tamboli</b>, Taipeng Tian, Lingjiong Zhu, Yuchen Liu",
+    "venue": "arXiv preprint",
+    "chips": [
+      "1 citation"
+    ],
+    "links": [
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2502.02118"
+      }
+    ],
+    "section": "other"
+  },
+  {
+    "type": "thesis",
+    "tag": "Thesis",
+    "year": "2025",
+    "title": "Towards Trustworthy Generative AI: Privacy, Alignment, and Applications",
+    "authors": "<b>Dipesh Hemchandra Tamboli</b>",
+    "venue": "PhD Dissertation, Purdue University",
+    "links": [
+      {
+        "label": "Purdue",
+        "url": "https://hammer.purdue.edu/articles/thesis/Towards_Trustworthy_Generative_AI_Privacy_Alignment_and_Applications/29424095"
+      }
+    ],
+    "section": "other"
+  },
+  {
     "type": "preprint",
     "tag": "Preprint",
     "year": "2023",
@@ -417,7 +469,7 @@
     "authors": "Jue Mo, <b>Dipesh Tamboli</b>, Eva Haviarova",
     "venue": "European Journal of Wood and Wood Products",
     "chips": [
-      "11 citations"
+      "12 citations"
     ],
     "links": [
       {
@@ -428,16 +480,16 @@
     "section": "other"
   },
   {
-    "type": "thesis",
-    "tag": "Thesis",
-    "year": "2025",
-    "title": "Towards Trustworthy Generative AI: Privacy, Alignment, and Applications",
+    "type": "preprint",
+    "tag": "arXiv",
+    "year": "2021",
+    "title": "Explaining decision of model from its prediction",
     "authors": "<b>Dipesh Tamboli</b>",
-    "venue": "PhD Dissertation, Purdue University",
+    "venue": "arXiv preprint (literature review)",
     "links": [
       {
-        "label": "Purdue",
-        "url": "https://hammer.purdue.edu/articles/thesis/Towards_Trustworthy_Generative_AI_Privacy_Alignment_and_Applications/29424095"
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2106.08366"
       }
     ],
     "section": "other"

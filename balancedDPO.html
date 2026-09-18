@@ -20,16 +20,16 @@ description: "BalancedDPO: Adaptive Multi-Metric Alignment — multi-metric pref
         <a class="chip link" href="https://arxiv.org/pdf/2503.12575">PDF</a>
         <a class="chip link" href="https://arxiv.org/html/2503.12575">HTML</a>
         <a class="chip link" href="https://openreview.net/forum?id=8HRID5VLQw">OpenReview (TMLR)</a>
-        <a class="chip link" href="https://github.com/Dipeshtamboli/BalancedDPO">Code</a>
-        <a class="chip link" href="https://doi.org/10.48550/arXiv.2503.12575">DOI</a>
+        <a class="chip link" href="https://github.com/Dipeshtamboli/BalancedDPO">Repository</a>
+        <a class="chip link" href="https://doi.org/10.48550/arXiv.2503.12575">arXiv DOI</a>
         <a class="chip link" href="https://www.semanticscholar.org/paper/445e202eede8d02561643546591330cc1986dcc3">Semantic Scholar</a>
       </div>
       <a class="back-link" href="{{ '/publications.html' | relative_url }}">← All publications</a>
     </header>
 
     <figure class="paper-fig">
-      <img src="{{ '/images/papers/balanceddpo/teaser.jpg' | relative_url }}" alt="BalancedDPO teaser: multi-metric alignment vs single-metric models" width="1200" height="716" loading="lazy">
-      <figcaption>Single-metric alignment tends to win on one axis while failing another (e.g. aesthetics vs. prompt-alignment). BalancedDPO, which combines multiple preference metrics, stays strong across all of them.</figcaption>
+      <img src="{{ '/images/papers/balanceddpo/teaser.jpg' | relative_url }}" alt="Grid of images generated from prompts sampled from the Pick-a-Pic dataset" width="1200" height="716" loading="lazy">
+      <figcaption>Examples generated from randomly sampled prompts in the Pick-a-Pic dataset.</figcaption>
     </figure>
 
     <section>
@@ -38,7 +38,7 @@ description: "BalancedDPO: Adaptive Multi-Metric Alignment — multi-metric pref
         <p>
           Aligning text-to-image diffusion models with human preferences usually means optimizing a
           <b>single</b> reward — aesthetics, or a CLIP/semantic score, or a human-preference model.
-          That over-fits whichever metric you pick and neglects the others. <b>BalancedDPO</b> aligns to
+          That can bias the model toward the chosen metric and neglect the others. <b>BalancedDPO</b> aligns to
           <b>several preference metrics at once</b> inside the Direct Preference Optimization (DPO) framework:
           instead of averaging rewards (where scale differences let one metric dominate), it takes a
           <b>majority vote</b> among multiple preference scorers to decide the preferred image, and feeds that
@@ -52,7 +52,7 @@ description: "BalancedDPO: Adaptive Multi-Metric Alignment — multi-metric pref
           <li><b>The problem:</b> multiple, sometimes conflicting metrics (semantic consistency, aesthetics, human preference). Single-metric or scalarized (weighted-sum) rewards bias the model toward one criterion.</li>
           <li><b>Majority-vote consensus:</b> aggregate agreement across diverse scorers in the <em>preference</em> space rather than mixing raw reward values — sidestepping reward-scale conflicts.</li>
           <li><b>Consensus-in-the-loop DPO:</b> the vote is integrated directly into the DPO objective, with dynamic reference-model updates, yielding stabler gradient directions across heterogeneous metrics.</li>
-          <li><b>Simple &amp; scalable:</b> keeps the standard DPO pipeline — no separate reward model to train at inference.</li>
+          <li><b>Simple &amp; scalable:</b> keeps the standard DPO pipeline — no reward model is needed at inference.</li>
         </ul>
       </div>
 
@@ -64,7 +64,7 @@ description: "BalancedDPO: Adaptive Multi-Metric Alignment — multi-metric pref
       <h2>Results</h2>
       <div class="prose">
         <ul>
-          <li>Consistently higher preference <b>win rates</b> over baselines on <b>Pick-a-Pic</b>, <b>PartiPrompt</b>, and <b>HPD</b>.</li>
+          <li>Higher pairwise <b>win rates</b> than DiffusionDPO across all four metrics on <b>Pick-a-Pic</b>, <b>PartiPrompt</b>, and <b>HPD</b> in the SD&nbsp;1.5 and SDXL evaluations.</li>
           <li>Holds across backbones: <b>Stable Diffusion 1.5</b>, <b>SD 2.1</b>, and <b>SDXL</b>.</li>
           <li>Ablations confirm both the <b>majority-vote aggregation</b> and <b>dynamic reference updating</b> drive the gains.</li>
         </ul>

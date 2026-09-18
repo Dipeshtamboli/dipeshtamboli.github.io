@@ -80,7 +80,8 @@ title: Dipesh Tamboli
       <h2>Selected Publications</h2>
       <p class="pub-venue" style="margin:-8px 0 18px">
         {{ site.data.scholar.citations }} citations · h-index {{ site.data.scholar.h_index }} · i10-index {{ site.data.scholar.i10_index }} —
-        <a href="{{ site.scholar_url }}">Google Scholar</a>.
+        <a href="{{ site.scholar_url }}">Google Scholar</a>{% if site.data.scholar.updated %}
+        <span style="font-style:normal">(updated <time datetime="{{ site.data.scholar.updated }}">{{ site.data.scholar.updated }}</time>)</span>{% endif %}.
       </p>
 
       {%- assign featured = site.data.publications | where: "featured", true -%}
@@ -88,7 +89,7 @@ title: Dipesh Tamboli
 {% include pub-card.html pub=pub home=true %}
       {%- endfor %}
 
-      <a class="back-link" href="publications.html">See all publications (18) →</a>
+      <a class="back-link" href="publications.html">See all publications ({{ site.data.publications | size }}) →</a>
     </section>
 
     <!-- AWARDS -->
