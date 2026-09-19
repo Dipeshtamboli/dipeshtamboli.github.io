@@ -1,7 +1,7 @@
 title: Dipesh Tamboli
 description: >-
-  Dipesh Tamboli — Research Scientist at Meta. Alignment, privacy-preserving
-  training, and trustworthiness of large language and foundation models.
+  Dipesh Tamboli — Research Scientist at Meta. Research interests: AI alignment,
+  privacy-preserving learning, and trustworthy foundation models.
 author: Dipesh Tamboli
 url: "https://dipeshtamboli.github.io"
 baseurl: ""
@@ -13,10 +13,11 @@ defaults:
   - scope:
       path: ""
     values:
-      image: /images/og-card.png
-
-twitter:
-  card: summary_large_image
+      image:
+        path: /images/og-card.png
+        width: 1200
+        height: 630
+        alt: "Dipesh Tamboli — Research Scientist in trustworthy AI"
 
 # bump to force browsers to fetch fresh site.css / theme.js
 asset_ver: "21"
