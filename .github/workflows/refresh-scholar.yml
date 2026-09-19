@@ -21,11 +21,11 @@ jobs:
         run: python scripts/fetch_scholar.py
       - name: Commit if changed
         run: |
-          if ! git diff --quiet -- _data/scholar.json; then
+          if ! git diff --quiet -- _data/scholar.json _data/publications.json; then
             git config user.name  "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add _data/scholar.json
-            git commit -m "Refresh Scholar stats [skip ci]"
+            git add _data/scholar.json _data/publications.json
+            git commit -m "Refresh Scholar and publication citations [skip ci]"
             git push
           else
             echo "No change."
