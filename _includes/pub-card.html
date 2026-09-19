@@ -15,7 +15,11 @@
   {%- assign links = pub.links -%}
 {%- endif -%}
       <article class="pub">
-        <div class="venue-tag" data-type="{{ pub.type }}">{{ pub.tag }}<span class="yr">{{ pub.year }}</span><span class="ty">{{ ty }}</span></div>
+        <div class="venue-tag" data-type="{{ pub.type }}">
+          <span class="venue-name">{{ pub.tag }}</span>
+          <span class="yr">{{ pub.year }}</span>
+          <span class="ty">{{ ty }}</span>
+        </div>
         <div>
           <h3 class="pub-title">{{ pub.title }}</h3>
           {%- if pub.authors %}
@@ -28,7 +32,7 @@
             <span class="chip">{{ c }}</span>
             {%- endfor %}
             {%- for l in links %}
-            <a class="chip link" href="{{ l.url }}">{{ l.label }}</a>
+            <a class="chip link" href="{{ l.url }}" aria-label="{{ l.label | escape }} for {{ pub.title | strip_html | escape }}">{{ l.label }}</a>
             {%- endfor %}
           </div>
           {%- endif %}
