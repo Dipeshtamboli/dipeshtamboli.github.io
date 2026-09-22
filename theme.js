@@ -84,12 +84,42 @@
   // mobile hamburger menu
   var nav=document.querySelector('nav'), tgl=document.getElementById('navToggle');
   if(nav&&tgl){
+    var menuLinks=nav.querySelectorAll('.nav-links a');
+    function setMenu(open,returnFocus){
+      nav.classList.toggle('open',open);
+      tgl.setAttribute('aria-expanded',open?'true':'false');
+      tgl.setAttribute('aria-label',open?'Close menu':'Open menu');
+      if(!open&&returnFocus)tgl.focus({preventScroll:true});
+    }
     tgl.addEventListener('click',function(){
-      var open=nav.classList.toggle('open');
-      tgl.setAttribute('aria-expanded',open);
+      var open=!nav.classList.contains('open');
+      setMenu(open,false);
+      if(open&&menuLinks.length)menuLinks[0].focus({preventScroll:true});
     });
-    nav.querySelectorAll('.nav-links a').forEach(function(a){
-      a.addEventListener('click',function(){nav.classList.remove('open');tgl.setAttribute('aria-expanded',false);});
+    menuLinks.forEach(function(a){
+      a.addEventListener('click',function(){
+        var samePage=a.origin===window.location.origin&&a.pathname===window.location.pathname&&a.hash;
+        setMenu(false,false);
+        if(samePage){
+          var target=document.getElementById(a.hash.slice(1));
+          if(target){
+            if(!target.hasAttribute('tabindex'))target.setAttribute('tabindex','-1');
+            window.setTimeout(function(){target.focus({preventScroll:true});},0);
+          }
+        }
+      });
     });
+    document.addEventListener('keydown',function(e){
+      if(e.key==='Escape'&&nav.classList.contains('open'))setMenu(false,true);
+    });
+    document.addEventListener('pointerdown',function(e){
+      if(nav.classList.contains('open')&&!nav.contains(e.target))setMenu(false,false);
+    });
+    var mobile=window.matchMedia&&window.matchMedia('(max-width: 760px)');
+    if(mobile){
+      var closeOnDesktop=function(e){if(!e.matches)setMenu(false,false);};
+      if(mobile.addEventListener)mobile.addEventListener('change',closeOnDesktop);
+      else if(mobile.addListener)mobile.addListener(closeOnDesktop);
+    }
   }
 })();

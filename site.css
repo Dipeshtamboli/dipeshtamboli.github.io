@@ -87,7 +87,7 @@ nav{
 .nav-links{display:flex;gap:20px;align-items:center}
 .nav-links a{color:var(--muted);font-size:.92rem;font-weight:500}
 .nav-links a:hover{color:var(--text);text-decoration:none}
-.nav-links a.active{color:var(--accent)}
+.nav-links a.active,.nav-links a[aria-current="page"]{color:var(--accent)}
 .theme-btn{
   background:var(--surface);border:1px solid var(--border);color:var(--text);
   width:34px;height:34px;border-radius:9px;cursor:pointer;font-size:1rem;
@@ -102,8 +102,9 @@ nav{
 }
 .nav-toggle:hover{background:var(--accent-soft)}
 .nav-toggle svg{width:18px;height:18px}
-@media(max-width:560px){
+@media(max-width:760px){
   .nav-inner{position:relative;padding:12px 16px}
+  .theme-btn,.nav-toggle{width:44px;height:44px;border-radius:11px}
   .nav-toggle{display:inline-flex}
   .nav-links{
     display:none;position:absolute;top:100%;left:0;right:0;z-index:60;
@@ -112,6 +113,7 @@ nav{
     padding:4px 16px 10px;
   }
   nav.open .nav-links{display:flex}
+  nav.open .nav-toggle{background:var(--accent-soft);border-color:var(--accent)}
   .nav-links a{padding:12px 2px;font-size:1rem;border-top:1px solid var(--border)}
   .nav-links a:first-child{border-top:none}
 }

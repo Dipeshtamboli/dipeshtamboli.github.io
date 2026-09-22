@@ -20,7 +20,7 @@ defaults:
         alt: "Dipesh Tamboli — Research Scientist in trustworthy AI"
 
 # bump to force browsers to fetch fresh site.css / theme.js
-asset_ver: "22"
+asset_ver: "23"
 
 scholar_url: "https://scholar.google.com/citations?user=H8YEc-gAAAAJ&hl=en"
 
