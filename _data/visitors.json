@@ -56,6 +56,13 @@
     "count": 2
   },
   {
+    "country": "South Korea",
+    "code": "KR",
+    "lat": 37,
+    "lng": 127.5,
+    "count": 2
+  },
+  {
     "country": "Brazil",
     "code": "BR",
     "lat": -10,
@@ -81,13 +88,6 @@
     "code": "HK",
     "lat": 22.3,
     "lng": 114.2,
-    "count": 1
-  },
-  {
-    "country": "South Korea",
-    "code": "KR",
-    "lat": 37,
-    "lng": 127.5,
     "count": 1
   },
   {
