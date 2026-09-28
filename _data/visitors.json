@@ -4,14 +4,14 @@
     "code": "US",
     "lat": 38,
     "lng": -97,
-    "count": 240
+    "count": 241
   },
   {
     "country": "India",
     "code": "IN",
     "lat": 22,
     "lng": 79,
-    "count": 22
+    "count": 23
   },
   {
     "country": "Singapore",
@@ -26,6 +26,13 @@
     "lat": 64,
     "lng": 26,
     "count": 4
+  },
+  {
+    "country": "Bangladesh",
+    "code": "BD",
+    "lat": 24,
+    "lng": 90,
+    "count": 3
   },
   {
     "country": "Switzerland",
