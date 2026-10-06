@@ -4,7 +4,7 @@
     "code": "US",
     "lat": 38,
     "lng": -97,
-    "count": 252
+    "count": 254
   },
   {
     "country": "India",
@@ -77,6 +77,13 @@
     "count": 2
   },
   {
+    "country": "Vietnam",
+    "code": "VN",
+    "lat": 16,
+    "lng": 108,
+    "count": 2
+  },
+  {
     "country": "Brazil",
     "code": "BR",
     "lat": -10,
@@ -102,13 +109,6 @@
     "code": "PT",
     "lat": 39.5,
     "lng": -8,
-    "count": 1
-  },
-  {
-    "country": "Vietnam",
-    "code": "VN",
-    "lat": 16,
-    "lng": 108,
     "count": 1
   }
 ]
