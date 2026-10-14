@@ -4,7 +4,7 @@
     "code": "US",
     "lat": 38,
     "lng": -97,
-    "count": 262
+    "count": 265
   },
   {
     "country": "India",
@@ -109,6 +109,13 @@
     "code": "PT",
     "lat": 39.5,
     "lng": -8,
+    "count": 1
+  },
+  {
+    "country": "Taiwan",
+    "code": "TW",
+    "lat": 23.7,
+    "lng": 121,
     "count": 1
   }
 ]
