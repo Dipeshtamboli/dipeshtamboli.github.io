@@ -4,7 +4,7 @@
     "code": "US",
     "lat": 38,
     "lng": -97,
-    "count": 278
+    "count": 280
   },
   {
     "country": "India",
@@ -95,6 +95,13 @@
     "code": "CA",
     "lat": 56,
     "lng": -106,
+    "count": 1
+  },
+  {
+    "country": "Colombia",
+    "code": "CO",
+    "lat": 4,
+    "lng": -73,
     "count": 1
   },
   {
