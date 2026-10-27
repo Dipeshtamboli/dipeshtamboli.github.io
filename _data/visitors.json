@@ -4,7 +4,7 @@
     "code": "US",
     "lat": 38,
     "lng": -97,
-    "count": 280
+    "count": 281
   },
   {
     "country": "India",
@@ -116,6 +116,13 @@
     "code": "PT",
     "lat": 39.5,
     "lng": -8,
+    "count": 1
+  },
+  {
+    "country": "Saudi Arabia",
+    "code": "SA",
+    "lat": 24,
+    "lng": 45,
     "count": 1
   },
   {
