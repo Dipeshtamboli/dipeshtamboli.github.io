@@ -63,6 +63,13 @@
     "count": 2
   },
   {
+    "country": "United Kingdom",
+    "code": "GB",
+    "lat": 54,
+    "lng": -2,
+    "count": 2
+  },
+  {
     "country": "Hong Kong",
     "code": "HK",
     "lat": 22.3,
@@ -91,6 +98,13 @@
     "count": 1
   },
   {
+    "country": "Australia",
+    "code": "AU",
+    "lat": -25,
+    "lng": 133,
+    "count": 1
+  },
+  {
     "country": "Brazil",
     "code": "BR",
     "lat": -10,
@@ -112,13 +126,6 @@
     "count": 1
   },
   {
-    "country": "United Kingdom",
-    "code": "GB",
-    "lat": 54,
-    "lng": -2,
-    "count": 1
-  },
-  {
     "country": "Portugal",
     "code": "PT",
     "lat": 39.5,
@@ -130,13 +137,6 @@
     "code": "SA",
     "lat": 24,
     "lng": 45,
-    "count": 1
-  },
-  {
-    "country": "Taiwan",
-    "code": "TW",
-    "lat": 23.7,
-    "lng": 121,
     "count": 1
   }
 ]
