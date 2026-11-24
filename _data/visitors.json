@@ -4,7 +4,7 @@
     "code": "US",
     "lat": 38,
     "lng": -97,
-    "count": 330
+    "count": 331
   },
   {
     "country": "India",
@@ -56,6 +56,13 @@
     "count": 3
   },
   {
+    "country": "Brazil",
+    "code": "BR",
+    "lat": -10,
+    "lng": -55,
+    "count": 2
+  },
+  {
     "country": "France",
     "code": "FR",
     "lat": 46,
@@ -102,13 +109,6 @@
     "code": "AU",
     "lat": -25,
     "lng": 133,
-    "count": 1
-  },
-  {
-    "country": "Brazil",
-    "code": "BR",
-    "lat": -10,
-    "lng": -55,
     "count": 1
   },
   {
