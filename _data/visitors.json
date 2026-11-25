@@ -21,18 +21,18 @@
     "count": 5
   },
   {
+    "country": "Bangladesh",
+    "code": "BD",
+    "lat": 24,
+    "lng": 90,
+    "count": 4
+  },
+  {
     "country": "Finland",
     "code": "FI",
     "lat": 64,
     "lng": 26,
     "count": 4
-  },
-  {
-    "country": "Bangladesh",
-    "code": "BD",
-    "lat": 24,
-    "lng": 90,
-    "count": 3
   },
   {
     "country": "Switzerland",
